@@ -27,19 +27,19 @@ type Tuple = [ number, Buffer ];
 
 type TupleString = [ number, string ];
 
-declare class Multiaddr {
-    constructor (addr: Multiaddr | Buffer | string);
+declare class MultiAddr {
+    constructor (addr: MultiAddr | Buffer | string);
 
-    static isMultiaddr (addr: Multiaddr): addr is Multiaddr;
-    static isName (other: Multiaddr): boolean;
-    static fromNodeAddress (addr: { address: string, port: string }, transport: string): Multiaddr;
+    static isMultiAddr (addr: any): addr is MultiAddr;
+    static isName (other: MultiAddr): boolean;
+    static fromNodeAddress (addr: { address: string, port: string }, transport: string): MultiAddr;
 
-    decapsulate (other: Multiaddr): Multiaddr;
-    encapsulate (other: Multiaddr): Multiaddr;
-    equals (other: Multiaddr): boolean;
+    decapsulate (other: MultiAddr): MultiAddr;
+    encapsulate (other: MultiAddr): MultiAddr;
+    equals (other: MultiAddr): boolean;
     getPeerId (): PeerId;
     inspect (): string;
-    isThinWaistAddress (other?: Multiaddr): boolean;
+    isThinWaistAddress (other?: MultiAddr): boolean;
     nodeAddress (): Address;
     protos (): Proto[];
     protoCodes (): number[];
@@ -50,4 +50,4 @@ declare class Multiaddr {
     toString (): string;
 }
 
-export default Multiaddr;
+export default MultiAddr;

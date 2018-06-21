@@ -1,5 +1,5 @@
-// Type definitions for peer-id 0.10.7
-// Project: https://github.com/libp2p/js-peer-id
+// Type definitions for peer-info 0.14.1
+// Project: https://github.com/libp2p/js-peer-info
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
