@@ -1,0 +1,17 @@
+{
+  "name": "@polkadot/ts",
+  "version": "0.0.1",
+  "description": "Typescript definitions that are not (yet) available on https://github.com/DefinitelyTyped/DefinitelyTyped",
+  "repository": "https://github.com/polkadot-js/ts.git",
+  "author": "Jaco Greeff <jacogr@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "./build.sh",
+    "check": "echo \"No 'yarn run check' available\"",
+    "test": "echo \"No 'yarn run test' available\""
+  },
+  "dependencies": {
+    "@polkadot/dev": "^0.19.28",
+    "@types/node": "^10.3.4"
+  }
+}
