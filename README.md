@@ -16,6 +16,8 @@ This following libraries are currently included. Where possible add the relevant
 - [libp2p-kad-dht](https://github.com/libp2p/js-libp2p-kad-dht)
 - [libp2p-mdns](https://github.com/libp2p/js-libp2p-mdns)
 - [libp2p-mplex](https://github.com/libp2p/js-libp2p-mplex)
+- [libp2p-railing](https://github.com/libp2p/js-libp2p-railing)
+- [libp2p-secio](https://github.com/libp2p/js-libp2p-secio)
 - [libp2p-spdy](https://github.com/libp2p/js-libp2p-spdy)
 - [libp2p-tcp](https://github.com/libp2p/js-libp2p-tcp)
 - [libp2p-webrtc-direct](https://github.com/libp2p/js-libp2p-webrtc-direct)
