@@ -10,3 +10,4 @@ This following libraries are currently included. Where possible add the relevant
 
 - [blakejs](https://github.com/dcposch/blakejs)
 - [bn.js](https://github.com/indutny/bn.js/) [@types PR #26717](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/26717)
+- [keccak](https://github.com/cryptocoinjs/keccak)
