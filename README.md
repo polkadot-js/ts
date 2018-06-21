@@ -29,3 +29,4 @@ This following libraries are currently included. Where possible add the relevant
 - [peer-info](https://github.com/libp2p/js-peer-info)
 - [pull-pushable](https://github.com/pull-stream/pull-pushable)
 - [pull-stream](https://github.com/pull-stream/pull-stream)
+- [tweetnacl](https://github.com/dchest/tweetnacl-js)
