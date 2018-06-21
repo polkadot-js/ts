@@ -35,4 +35,4 @@ declare class PeerId {
     toJSON (): JSON;
 }
 
-export = PeerId;
+export default PeerId;
