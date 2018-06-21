@@ -8,4 +8,5 @@ In general, updates here should have corrsponding PRs on the DefinitelyTyped rep
 
 This following libraries are currently included. Where possible add the relevant DT PRs as there are included - may not be applicable initially if definitions are not expansive enough or fully tested internally.
 
+- [blakejs](https://github.com/dcposch/blakejs)
 - [bn.js](https://github.com/indutny/bn.js/) [@types PR #26717](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/26717)
