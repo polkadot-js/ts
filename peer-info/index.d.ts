@@ -5,8 +5,8 @@
 
 /// <reference types="node"/>
 
-import MultiAddr from 'multiaddr';
-import PeerId from 'peer-id';
+import MultiAddr = require('multiaddr');
+import PeerId = require('peer-id');
 
 type CreateCb = (error: Error | null, peerId?: PeerId) => any;
 
@@ -45,4 +45,4 @@ declare class PeerInfo {
     isConnected (): boolean;
 }
 
-export default PeerInfo;
+export = PeerInfo;

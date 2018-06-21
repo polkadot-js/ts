@@ -27,3 +27,5 @@ This following libraries are currently included. Where possible add the relevant
 - [peer-book](https://github.com/libp2p/js-peer-book)
 - [peer-id](https://github.com/libp2p/js-peer-id)
 - [peer-info](https://github.com/libp2p/js-peer-info)
+- [pull-pushable](https://github.com/pull-stream/pull-pushable)
+- [pull-stream](https://github.com/pull-stream/pull-stream)

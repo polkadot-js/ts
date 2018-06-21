@@ -3,7 +3,7 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import PeerInfo from 'peer-info';
+import PeerInfo = require('peer-info');
 
 type Options = {
   broadcast?: boolean,
@@ -21,4 +21,4 @@ declare class LibP2pMdns {
   on (event: Events, cb: (peerInfo: PeerInfo) => any): void;
 }
 
-export default LibP2pMdns;
+export = LibP2pMdns;

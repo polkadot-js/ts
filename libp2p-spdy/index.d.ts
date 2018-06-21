@@ -14,4 +14,4 @@ declare type LibP2pSpdy = {
   muticodec: string;
 }
 
-export default LibP2pSpdy;
+export = LibP2pSpdy;

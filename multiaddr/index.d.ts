@@ -5,7 +5,7 @@
 
 /// <reference types="node"/>
 
-import PeerId from 'peer-id';
+import PeerId = require('peer-id');
 
 type Address = {
     family: string,
@@ -50,4 +50,4 @@ declare class MultiAddr {
     toString (): string;
 }
 
-export default MultiAddr;
+export = MultiAddr;

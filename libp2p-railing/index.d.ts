@@ -3,8 +3,8 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import MultiAddr from 'multiaddr';
-import PeerInfo from 'peer-info';
+import MultiAddr = require('multiaddr');
+import PeerInfo = require('peer-info');
 
 type Options = {
   list: Array<string | MultiAddr>,
@@ -19,4 +19,4 @@ declare class LibP2pRailing {
   on (event: Events, cb: (peerInfo: PeerInfo) => any): void;
 }
 
-export default LibP2pRailing;
+export = LibP2pRailing;

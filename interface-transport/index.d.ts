@@ -6,4 +6,4 @@
 declare interface Transport {
 }
 
-export default Transport;
+export = Transport;

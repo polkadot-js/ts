@@ -14,4 +14,4 @@ declare type LibP2pMplex = {
   muticodec: string;
 }
 
-export default LibP2pMplex;
+export = LibP2pMplex;

@@ -3,8 +3,8 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import PeerId from 'peer-id';
-import PeerInfo from 'peer-info';
+import PeerId = require('peer-id');
+import PeerInfo = require('peer-info');
 
 declare class PeerBook {
     constructor ();
@@ -18,4 +18,4 @@ declare class PeerBook {
     remove (peerInfo: PeerInfo, replace?: boolean): void;
 }
 
-export default PeerBook;
+export = PeerBook;

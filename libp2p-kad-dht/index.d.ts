@@ -6,4 +6,4 @@
 declare class LibP2pKadDht {
 }
 
-export default LibP2pKadDht;
+export = LibP2pKadDht;
