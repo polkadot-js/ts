@@ -5,6 +5,7 @@
 
 /// <reference types="node"/>
 
+declare module 'keccak' {
 interface KeccakHasher {
     digest(): Buffer;
     update(message: string | Buffer): KeccakHasher;
@@ -18,3 +19,4 @@ type KeccakTypes = 'keccak224' | 'keccak256' | 'keccak384' | 'keccak512' | 'sha3
 type keccak = (type: KeccakTypes) => KeccakHasher;
 
 export = keccak;
+}
