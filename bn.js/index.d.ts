@@ -8,7 +8,8 @@
 
 type Endianness = 'le' | 'be';
 
-declare class BN {
+declare module 'bn.js' {
+class BN {
     constructor(num: number | string | number[] | Buffer, base?: number, endian?: Endianness);
 
     static isBN(val: any): val is BN;
@@ -121,3 +122,4 @@ declare class BN {
 }
 
 export = BN;
+}

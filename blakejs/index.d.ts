@@ -5,6 +5,7 @@
 
 /// <reference types="node"/>
 
+declare module 'blakejs' {
 type BlakeJsContext = {
     b: Uint8Array,
     h: Uint32Array,
@@ -27,3 +28,4 @@ type blakejs = {
 };
 
 export = blakejs;
+}
