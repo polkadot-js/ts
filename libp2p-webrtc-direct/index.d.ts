@@ -10,5 +10,5 @@ declare module 'libp2p-webrtc-direct' {
 export class LibP2pWebRtcDirect implements Transport {
 }
 
-export = LibP2pWebRtcDirect;
+export default LibP2pWebRtcDirect;
 }

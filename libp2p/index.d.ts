@@ -10,7 +10,7 @@ import Transport from 'interface-transport';
 // @ts-ignore
 import { Libp2pKadDHT } from 'libp2p-kad-dht';
 // @ts-ignore
-import LibP2pMdns from 'libp2p-mdns';
+import { LibP2pMdns } from 'libp2p-mdns';
 // @ts-ignore
 import { LibP2pMplex } from 'libp2p-mplex';
 // @ts-ignore

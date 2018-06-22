@@ -10,5 +10,5 @@ declare module 'libp2p-websockets' {
 export class LibP2pWebsockets implements Transport {
 }
 
-export = LibP2pWebsockets;
+export default LibP2pWebsockets;
 }

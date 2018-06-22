@@ -10,5 +10,5 @@ declare module 'libp2p-webrtc-star' {
 export class LibP2pWebRtcStar implements Transport {
 }
 
-export = LibP2pWebRtcStar;
+export default LibP2pWebRtcStar;
 }

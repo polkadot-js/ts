@@ -7,10 +7,6 @@
 /// <reference types="node" />
 
 declare module 'memdown' {
-export = memdown;
-
-var memdown: memdown.Constructor;
-
 namespace memdown {
     type Bytes = string | Buffer;
     type ErrCallback = (error: any) => void;
@@ -145,4 +141,8 @@ namespace memdown {
 
     type Constructor = () => MemDown;
 }
+
+const memdownConstrctor: memdown.Constructor;
+
+export = memdownConstrctor;
 }

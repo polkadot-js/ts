@@ -10,5 +10,5 @@ declare module 'libp2p-tcp' {
 export class LibP2pTcp implements Transport {
 }
 
-export = LibP2pTcp;
+export default LibP2pTcp;
 }

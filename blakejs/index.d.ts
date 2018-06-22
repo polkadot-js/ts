@@ -14,7 +14,7 @@ type BlakeJsContext = {
     outlen: number
 };
 
-interface BlakeJs {
+type BlakeJs = {
     blake2b: (data: Buffer | Uint8Array | string, key?: Uint8Array | null, outlen?: number) => Uint8Array,
     blake2bFinal: (context: BlakeJsContext) => Uint8Array,
     blake2bHex: (data: Buffer | Uint8Array | string, key?: Uint8Array | null, outlen?: number) => string,
