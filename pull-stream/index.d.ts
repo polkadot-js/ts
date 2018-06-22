@@ -5,6 +5,7 @@
 
 /// <reference types="node"/>
 
+declare module 'pull-stream' {
 type Pull = {
     (source: any, sink: any): void;
 
@@ -14,3 +15,4 @@ type Pull = {
 };
 
 export = Pull;
+}

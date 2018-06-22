@@ -5,10 +5,12 @@
 
 /// <reference types="node"/>
 
+declare module 'pull-pushable' {
 type Pushable = {
     push: (buffer: Buffer) => void
 };
 
-declare type PullPushable = () => Pushable;
+type PullPushable = () => Pushable;
 
 export = PullPushable;
+}

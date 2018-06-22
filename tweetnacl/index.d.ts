@@ -5,6 +5,7 @@
 
 /// <reference types="node"/>
 
+declare module 'tweetnacl' {
 type KeypairType = {
     publicKey: Uint8Array,
     secretKey: Uint8Array
@@ -56,3 +57,4 @@ type TweetNacl = {
 };
 
 export = TweetNacl;
+}
