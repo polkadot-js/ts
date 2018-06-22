@@ -14,7 +14,7 @@ type BlakeJsContext = {
     outlen: number
 };
 
-type blakejs = {
+interface blakejs {
     blake2b: (data: Buffer | Uint8Array | string, key?: Uint8Array | null, outlen?: number) => Uint8Array,
     blake2bFinal: (context: BlakeJsContext) => Uint8Array,
     blake2bHex: (data: Buffer | Uint8Array | string, key?: Uint8Array | null, outlen?: number) => string,
@@ -25,7 +25,7 @@ type blakejs = {
     blake2sHex: (data: Buffer | Uint8Array | string, key?: Uint8Array | null, outlen?: number) => string,
     blake2sInit: (outlen?: number, key?: Uint8Array) => BlakeJsContext,
     blake2sUpdate: (context: BlakeJsContext, data: Buffer | Uint8Array | string) => void
-};
+}
 
 export = blakejs;
 }
