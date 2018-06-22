@@ -4,9 +4,9 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 // @ts-ignore
-import Connection from 'interface-connection';
+import { Connection } from 'interface-connection';
 // @ts-ignore
-import Transport from 'interface-transport';
+import { Transport } from 'interface-transport';
 // @ts-ignore
 import { Libp2pKadDHT } from 'libp2p-kad-dht';
 // @ts-ignore
@@ -49,5 +49,7 @@ export class LibP2p {
     stop (cb: (error: Error | null) => any): void;
 }
 
-export default LibP2p;
+const libp2p: LibP2p;
+
+export default libp2p;
 }

@@ -7,9 +7,7 @@
 import PeerInfo from 'peer-info';
 
 declare module 'interface-connection' {
-interface Connection {
+export interface Connection {
     getPeerInfo (cb: (error: Error | null, peerInfo?: PeerInfo) => any): void;
 }
-
-export = Connection;
 }

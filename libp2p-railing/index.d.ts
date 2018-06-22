@@ -22,5 +22,5 @@ export class LibP2pRailing {
   on (event: Events, cb: (peerInfo: PeerInfo) => any): void;
 }
 
-export = LibP2pRailing;
+export default LibP2pRailing;
 }

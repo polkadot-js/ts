@@ -6,8 +6,8 @@
 
 import { AbstractLevelDown } from 'abstract-leveldown';
 
-declare module 'memdown' {
-const memdown: () => AbstractLevelDown;
+declare module 'leveldown' {
+const leveldown: (path: string) => AbstractLevelDown;
 
-export default memdown;
+export default leveldown;
 }

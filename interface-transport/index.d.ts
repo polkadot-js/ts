@@ -4,8 +4,6 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 declare module 'interface-transport' {
-interface Transport {
+export interface Transport {
 }
-
-export = Transport;
 }

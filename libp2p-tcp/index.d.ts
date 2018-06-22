@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 // @ts-ignore
-import Transport from 'interface-transport';
+import { Transport } from 'interface-transport';
 
 declare module 'libp2p-tcp' {
 export class LibP2pTcp implements Transport {
