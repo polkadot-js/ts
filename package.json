@@ -10,7 +10,7 @@
     "check": "echo \"No 'yarn run check' available\"",
     "test": "echo \"No 'yarn run test' available\""
   },
-  "dependencies": {
+  "devDependencies": {
     "@polkadot/dev": "^0.20.1",
     "@types/node": "^10.3.4"
   }
