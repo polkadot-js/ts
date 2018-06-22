@@ -5,12 +5,12 @@
 
 /// <reference types="node"/>
 
+declare module 'peer-info' {
 // @ts-ignore
 import MultiAddr from 'multiaddr';
 // @ts-ignore
 import PeerId from 'peer-id';
 
-declare module 'peer-info' {
 type CreateCb = (error: Error | null, peerId?: PeerId) => any;
 
 type CreateOptions = {

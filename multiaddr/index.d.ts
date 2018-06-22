@@ -5,10 +5,10 @@
 
 /// <reference types="node"/>
 
+declare module 'multiaddr' {
 // @ts-ignore
 import PeerId from 'peer-id';
 
-declare module 'multiaddr' {
 type Address = {
     family: string,
     host: string,

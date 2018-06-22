@@ -3,12 +3,12 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+declare module 'libp2p-railing' {
 // @ts-ignore
 import MultiAddr from 'multiaddr';
 // @ts-ignore
 import PeerInfo from 'peer-info';
 
-declare module 'libp2p-railing' {
 type Options = {
   list: Array<string | MultiAddr>,
   interval?: number

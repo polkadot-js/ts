@@ -3,10 +3,10 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+declare module 'libp2p-tcp' {
 // @ts-ignore
 import { Transport } from 'interface-transport';
 
-declare module 'libp2p-tcp' {
 export class LibP2pTcp implements Transport {
 }
 

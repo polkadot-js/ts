@@ -3,10 +3,10 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+declare module 'libp2p-websockets' {
 // @ts-ignore
 import { Transport } from 'interface-transport';
 
-declare module 'libp2p-websockets' {
 export class LibP2pWebsockets implements Transport {
 }
 

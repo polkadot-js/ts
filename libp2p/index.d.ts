@@ -3,6 +3,7 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+declare module 'libp2p' {
 // @ts-ignore
 import { Connection } from 'interface-connection';
 // @ts-ignore
@@ -24,7 +25,6 @@ import PeerBook from 'peer-book';
 // @ts-ignore
 import PeerInfo from 'peer-info';
 
-declare module 'libp2p' {
 type CreateOptions = {
     DHT: typeof Libp2pKadDHT,
     connection: {

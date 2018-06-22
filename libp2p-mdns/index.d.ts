@@ -3,10 +3,10 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+declare module 'libp2p-mdns' {
 // @ts-ignore
 import PeerInfo from 'peer-info';
 
-declare module 'libp2p-mdns' {
 type Options = {
   broadcast?: boolean,
   interval?: number,

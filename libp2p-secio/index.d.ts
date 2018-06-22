@@ -3,10 +3,10 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+declare module 'libp2p-secio' {
 // @ts-ignore
 import PeerId from 'peer-id';
 
-declare module 'libp2p-secio' {
 export type LibP2pSecio = {
   tag: '/secio/1.0.0',
 

@@ -3,12 +3,12 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+declare module 'peer-book' {
 // @ts-ignore
 import PeerId from 'peer-id';
 // @ts-ignore
 import PeerInfo from 'peer-info';
 
-declare module 'peer-book' {
 class PeerBook {
     constructor ();
 

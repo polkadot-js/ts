@@ -4,9 +4,9 @@
 //                 Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+declare module 'memdown' {
 import { AbstractLevelDown } from 'abstract-leveldown';
 
-declare module 'memdown' {
 const memdown: () => AbstractLevelDown;
 
 export default memdown;

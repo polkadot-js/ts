@@ -6,9 +6,9 @@
 
 /// <reference types="node"/>
 
+declare module 'bn.js' {
 type Endianness = 'le' | 'be';
 
-declare module 'bn.js' {
 class BN {
     constructor(num: number | string | number[] | Buffer, base?: number, endian?: Endianness);
 
