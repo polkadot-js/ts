@@ -5,8 +5,10 @@
 
 /// <reference types="node"/>
 
-import PeerId = require('peer-id');
+// @ts-ignore
+import PeerId from 'peer-id';
 
+declare module 'multiaddr' {
 type Address = {
     family: string,
     host: string,
@@ -27,7 +29,7 @@ type Tuple = [ number, Buffer ];
 
 type TupleString = [ number, string ];
 
-declare class MultiAddr {
+class MultiAddr {
     constructor (addr: MultiAddr | Buffer | string);
 
     static isMultiAddr (addr: any): addr is MultiAddr;
@@ -51,3 +53,4 @@ declare class MultiAddr {
 }
 
 export = MultiAddr;
+}

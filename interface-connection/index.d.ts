@@ -3,10 +3,13 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import PeerInfo = require('peer-info');
+// @ts-ignore
+import PeerInfo from 'peer-info';
 
-declare interface Connection {
+declare module 'interface-connection' {
+interface Connection {
     getPeerInfo (cb: (error: Error | null, peerInfo?: PeerInfo) => any): void;
 }
 
 export = Connection;
+}

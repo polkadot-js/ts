@@ -5,9 +5,12 @@
 
 /// <reference types="node"/>
 
-import MultiAddr = require('multiaddr');
-import PeerId = require('peer-id');
+// @ts-ignore
+import MultiAddr from 'multiaddr';
+// @ts-ignore
+import PeerId from 'peer-id';
 
+declare module 'peer-info' {
 type CreateCb = (error: Error | null, peerId?: PeerId) => any;
 
 type CreateOptions = {
@@ -32,7 +35,7 @@ type MultiAddrSet = {
     toArray (): MultiAddr[];
 };
 
-declare class PeerInfo {
+class PeerInfo {
     constructor (id?: PeerId);
 
     static create (optsOrCb: CreateOptions | CreateCb, cb?: CreateCb): PeerInfo;
@@ -46,3 +49,4 @@ declare class PeerInfo {
 }
 
 export = PeerInfo;
+}

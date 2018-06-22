@@ -3,9 +3,12 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import Transport = require('interface-transport');
+// @ts-ignore
+import Transport from 'interface-transport';
 
-declare class LibP2pWebRtcDirect implements Transport {
+declare module 'libp2p-webrtc-direct' {
+export class LibP2pWebRtcDirect implements Transport {
 }
 
 export = LibP2pWebRtcDirect;
+}

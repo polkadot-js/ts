@@ -7,7 +7,7 @@
   "license": "ISC",
   "scripts": {
     "build": "./build.sh",
-    "check": "echo \"No 'yarn run check' available\"",
+    "check": "tsc --noEmit",
     "test": "echo \"No 'yarn run test' available\""
   },
   "devDependencies": {

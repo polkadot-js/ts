@@ -3,9 +3,12 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import Transport = require('interface-transport');
+// @ts-ignore
+import Transport from 'interface-transport';
 
-declare class LibP2pTcp implements Transport {
+declare module 'libp2p-tcp' {
+export class LibP2pTcp implements Transport {
 }
 
 export = LibP2pTcp;
+}

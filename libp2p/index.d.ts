@@ -3,17 +3,28 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import Connection = require('interface-connection');
-import Transport = require('interface-transport');
-import Libp2pKadDHT = require('libp2p-kad-dht');
-import LibP2pMdns = require('libp2p-mdns');
-import LibP2pMplex = require('libp2p-mplex');
-import LibP2pRailing = require('libp2p-railing');
-import LibP2pSecio = require('libp2p-secio');
-import LibP2pSpdy = require('libp2p-spdy');
-import PeerBook = require('peer-book');
-import PeerInfo = require('peer-info');
+// @ts-ignore
+import Connection from 'interface-connection';
+// @ts-ignore
+import Transport from 'interface-transport';
+// @ts-ignore
+import { Libp2pKadDHT } from 'libp2p-kad-dht';
+// @ts-ignore
+import LibP2pMdns from 'libp2p-mdns';
+// @ts-ignore
+import { LibP2pMplex } from 'libp2p-mplex';
+// @ts-ignore
+import LibP2pRailing from 'libp2p-railing';
+// @ts-ignore
+import { LibP2pSecio } from 'libp2p-secio';
+// @ts-ignore
+import { LibP2pSpdy } from 'libp2p-spdy';
+// @ts-ignore
+import PeerBook from 'peer-book';
+// @ts-ignore
+import PeerInfo from 'peer-info';
 
+declare module 'libp2p' {
 type CreateOptions = {
     DHT: typeof Libp2pKadDHT,
     connection: {
@@ -26,7 +37,7 @@ type CreateOptions = {
 
 type Events = 'peer:connect' | 'peer:disconnect' | 'peer:discovery' | 'start' | 'stop';
 
-declare class LibP2p {
+export class LibP2p {
     constructor (peerInfo: PeerInfo, PeerBook: PeerBook, options: CreateOptions);
 
     dial (peerInfo: PeerInfo, cb: (error: Error | null) => any): void;
@@ -38,4 +49,5 @@ declare class LibP2p {
     stop (cb: (error: Error | null) => any): void;
 }
 
-export = LibP2p;
+export default LibP2p;
+}

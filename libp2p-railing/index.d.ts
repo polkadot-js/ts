@@ -3,9 +3,12 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import MultiAddr = require('multiaddr');
-import PeerInfo = require('peer-info');
+// @ts-ignore
+import MultiAddr from 'multiaddr';
+// @ts-ignore
+import PeerInfo from 'peer-info';
 
+declare module 'libp2p-railing' {
 type Options = {
   list: Array<string | MultiAddr>,
   interval?: number
@@ -13,10 +16,11 @@ type Options = {
 
 type Events = 'peer';
 
-declare class LibP2pRailing {
+export class LibP2pRailing {
   constructor (options: Options);
 
   on (event: Events, cb: (peerInfo: PeerInfo) => any): void;
 }
 
 export = LibP2pRailing;
+}

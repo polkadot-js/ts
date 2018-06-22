@@ -5,6 +5,7 @@
 
 /// <reference types="node"/>
 
+declare module 'peer-id' {
 type CreateCb = (error: Error | null, peerId?: PeerId) => any;
 
 type CreateOptions = {
@@ -17,7 +18,7 @@ type JSON = {
     privKey: string
 };
 
-declare class PeerId {
+class PeerId {
     constructor (id: Buffer, privKey?: any, pubKey?: any);
 
     static create (optsOrCb: CreateOptions | CreateCb, cb?: CreateCb): PeerId;
@@ -36,3 +37,4 @@ declare class PeerId {
 }
 
 export = PeerId;
+}

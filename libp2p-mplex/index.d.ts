@@ -3,9 +3,10 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+declare module 'libp2p-mplex' {
 type Muxer = {};
 
-declare type LibP2pMplex = {
+export type LibP2pMplex = {
   (conn: any, isListener: boolean): Muxer;
 
   dialer (conn: any): Muxer;
@@ -14,4 +15,7 @@ declare type LibP2pMplex = {
   muticodec: string;
 }
 
-export = LibP2pMplex;
+const mplex: LibP2pMplex;
+
+export default mplex;
+}

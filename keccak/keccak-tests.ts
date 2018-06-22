@@ -1,4 +1,4 @@
-import createKeccak = require('keccak');
+import createKeccak from 'keccak';
 
 const context = createKeccak('keccak256');
 

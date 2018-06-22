@@ -3,12 +3,17 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import PeerId = require('peer-id');
+// @ts-ignore
+import PeerId from 'peer-id';
 
-declare type LibP2pSecio = {
+declare module 'libp2p-secio' {
+export type LibP2pSecio = {
   tag: '/secio/1.0.0',
 
   encrypt (localId: PeerId, conn: any, remoteId: PeerId, callback: () => any): void
 }
 
-export = LibP2pSecio;
+const secio: LibP2pSecio;
+
+export default secio;
+}

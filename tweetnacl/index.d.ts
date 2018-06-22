@@ -56,5 +56,7 @@ type TweetNacl = {
     sign: Sign
 };
 
-export = TweetNacl;
+const tweetnacl: TweetNacl;
+
+export default tweetnacl;
 }

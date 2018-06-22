@@ -3,10 +3,13 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import PeerId = require('peer-id');
-import PeerInfo = require('peer-info');
+// @ts-ignore
+import PeerId from 'peer-id';
+// @ts-ignore
+import PeerInfo from 'peer-info';
 
-declare class PeerBook {
+declare module 'peer-book' {
+class PeerBook {
     constructor ();
 
     get (peer: PeerId | PeerInfo | string): PeerInfo;
@@ -19,3 +22,4 @@ declare class PeerBook {
 }
 
 export = PeerBook;
+}

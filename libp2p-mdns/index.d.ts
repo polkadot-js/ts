@@ -3,8 +3,10 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import PeerInfo = require('peer-info');
+// @ts-ignore
+import PeerInfo from 'peer-info';
 
+declare module 'libp2p-mdns' {
 type Options = {
   broadcast?: boolean,
   interval?: number,
@@ -15,10 +17,13 @@ type Options = {
 
 type Events = 'peer';
 
-declare class LibP2pMdns {
+export class LibP2pMdns {
   constructor (options: Options);
 
   on (event: Events, cb: (peerInfo: PeerInfo) => any): void;
 }
 
-export = LibP2pMdns;
+const Mdns: typeof LibP2pMdns;
+
+export default Mdns;
+}

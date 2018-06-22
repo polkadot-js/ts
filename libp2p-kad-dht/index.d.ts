@@ -3,7 +3,11 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare class LibP2pKadDht {
+declare module 'libp2p-kad-dht' {
+export class LibP2pKadDht {
 }
 
-export = LibP2pKadDht;
+const DHT: typeof LibP2pKadDht;
+
+export default DHT;
+}

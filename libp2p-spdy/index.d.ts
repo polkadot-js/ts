@@ -3,9 +3,10 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+declare module 'libp2p-spdy' {
 type Muxer = {};
 
-declare type LibP2pSpdy = {
+export type LibP2pSpdy = {
   (conn: any, isListener: boolean): Muxer;
 
   dialer (conn: any): Muxer;
@@ -14,4 +15,7 @@ declare type LibP2pSpdy = {
   muticodec: string;
 }
 
-export = LibP2pSpdy;
+const spdy: LibP2pSpdy;
+
+export default spdy;
+}

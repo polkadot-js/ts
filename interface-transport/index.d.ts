@@ -3,7 +3,9 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare interface Transport {
+declare module 'interface-transport' {
+interface Transport {
 }
 
 export = Transport;
+}
