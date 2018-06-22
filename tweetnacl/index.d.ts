@@ -6,7 +6,7 @@
 /// <reference types="node"/>
 
 declare module 'tweetnacl' {
-type KeypairType = {
+export type KeypairType = {
     publicKey: Uint8Array,
     secretKey: Uint8Array
 };
