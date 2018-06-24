@@ -17,8 +17,8 @@ declare namespace PeerInfo {
     type MultiAddrSet = {
         size: number;
 
-        add (addr: MultiAddr): void;
-        addSafe (add: MultiAddr): void;
+        add (addr: MultiAddr | string): void;
+        addSafe (add: MultiAddr | string): void;
         delete (addr: MultiAddr): void;
         forEach (cb: (addr: MultiAddr, index: number) => any): void;
         has (addr: MultiAddr): boolean;
