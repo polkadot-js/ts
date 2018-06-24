@@ -3,24 +3,24 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module 'libp2p-railing' {
-// @ts-ignore
-import MultiAddr from 'multiaddr';
-// @ts-ignore
-import PeerInfo from 'peer-info';
+/// <reference types="../multiaddr"/>
+/// <reference types="../peer-info"/>
 
-type Options = {
-  list: Array<string | MultiAddr>,
-  interval?: number
-};
+declare namespace LibP2pRailing {
+  type Options = {
+    list: Array<string | MultiAddr>,
+    interval?: number
+  };
 
-type Events = 'peer';
-
-export class LibP2pRailing {
-  constructor (options: Options);
-
-  on (event: Events, cb: (peerInfo: PeerInfo) => any): void;
+  type Events = 'peer';
 }
 
+declare class LibP2pRailing {
+  constructor (options: LibP2pRailing.Options);
+
+  on (event: LibP2pRailing.Events, cb: (peerInfo: PeerInfo) => any): void;
+}
+
+declare module 'libp2p-railing' {
 export default LibP2pRailing;
 }

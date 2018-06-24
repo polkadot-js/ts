@@ -3,18 +3,20 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module 'libp2p-spdy' {
-type Muxer = {};
-
-export type LibP2pSpdy = {
-  (conn: any, isListener: boolean): Muxer;
-
-  dialer (conn: any): Muxer;
-  listener (conn: any): Muxer;
-
-  muticodec: string;
+declare namespace LibP2pSpdy {
+  type Muxer = {};
 }
 
+declare type LibP2pSpdy = {
+  (conn: any, isListener: boolean): LibP2pSpdy.Muxer;
+
+  dialer (conn: any): LibP2pSpdy.Muxer;
+  listener (conn: any): LibP2pSpdy.Muxer;
+
+  muticodec: string;
+};
+
+declare module 'libp2p-spdy' {
 const spdy: LibP2pSpdy;
 
 export default spdy;

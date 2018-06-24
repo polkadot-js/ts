@@ -5,27 +5,18 @@
 
 /// <reference types="../interface-connection"/>
 /// <reference types="../interface-transport"/>
+/// <reference types="../libp2p-kad-dht"/>
+/// <reference types="../libp2p-mdns"/>
+/// <reference types="../libp2p-mplex"/>
+/// <reference types="../libp2p-railing"/>
+/// <reference types="../libp2p-secio"/>
+/// <reference types="../libp2p-spdy"/>
 /// <reference types="../peer-book"/>
 /// <reference types="../peer-info"/>
 
 declare namespace LibP2p {
-    // FIXME These need to be updated so they can be imported with references as above - for now, HACK it to work... WIP, WIP...
-
-    // @ts-ignore
-    import { Libp2pKadDHT } from 'libp2p-kad-dht';
-    // @ts-ignore
-    import { LibP2pMdns } from 'libp2p-mdns';
-    // @ts-ignore
-    import { LibP2pMplex } from 'libp2p-mplex';
-    // @ts-ignore
-    import LibP2pRailing from 'libp2p-railing';
-    // @ts-ignore
-    import { LibP2pSecio } from 'libp2p-secio';
-    // @ts-ignore
-    import { LibP2pSpdy } from 'libp2p-spdy';
-
     type CreateOptions = {
-        DHT: typeof Libp2pKadDHT,
+        DHT: typeof LibP2pKadDht,
         connection: {
             crypto: Array<LibP2pSecio>,
             muxer: Array<LibP2pMplex | LibP2pSpdy>

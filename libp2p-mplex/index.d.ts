@@ -3,18 +3,20 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module 'libp2p-mplex' {
-type Muxer = {};
+declare namespace LibP2pMplex {
+  type Muxer = {};
+}
 
-export type LibP2pMplex = {
-  (conn: any, isListener: boolean): Muxer;
+declare interface LibP2pMplex {
+  (conn: any, isListener: boolean): LibP2pMplex.Muxer;
 
-  dialer (conn: any): Muxer;
-  listener (conn: any): Muxer;
+  dialer (conn: any): LibP2pMplex.Muxer;
+  listener (conn: any): LibP2pMplex.Muxer;
 
   muticodec: string;
 }
 
+declare module 'libp2p-mplex' {
 const mplex: LibP2pMplex;
 
 export default mplex;

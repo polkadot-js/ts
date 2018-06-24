@@ -3,27 +3,26 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module 'libp2p-mdns' {
-// @ts-ignore
-import PeerInfo from 'peer-info';
+/// <reference types="../peer-info"/>
 
-type Options = {
-  broadcast?: boolean,
-  interval?: number,
-  peerInfo: PeerInfo,
-  port?: number,
-  serviceTag?: string
-};
+declare namespace LibP2pMdns {
+  type Options = {
+    broadcast?: boolean,
+    interval?: number,
+    peerInfo: PeerInfo,
+    port?: number,
+    serviceTag?: string
+  };
 
-type Events = 'peer';
-
-export class LibP2pMdns {
-  constructor (options: Options);
-
-  on (event: Events, cb: (peerInfo: PeerInfo) => any): void;
+  type Events = 'peer';
 }
 
-const Mdns: typeof LibP2pMdns;
+declare class LibP2pMdns {
+  constructor (options: LibP2pMdns.Options);
 
-export default Mdns;
+  on (event: LibP2pMdns.Events, cb: (peerInfo: PeerInfo) => any): void;
+}
+
+declare module 'libp2p-mdns' {
+export default LibP2pMdns;
 }
