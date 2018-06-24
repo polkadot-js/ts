@@ -4,32 +4,31 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 /// <reference types="node"/>
+/// <reference types="../peer-id"/>
 
-declare module 'multiaddr' {
-// @ts-ignore
-import PeerId from 'peer-id';
+declare namespace MultiAddr {
+    type Address = {
+        family: string,
+        host: string,
+        port: string
+    };
 
-type Address = {
-    family: string,
-    host: string,
-    port: string
-};
+    type Options = Address & {
+        transport: string
+    };
 
-type Options = Address & {
-    transport: string
-};
+    type Proto = {
+        code: number,
+        name: string,
+        size: number
+    };
 
-type Proto = {
-    code: number,
-    name: string,
-    size: number
-};
+    type Tuple = [ number, Buffer ];
 
-type Tuple = [ number, Buffer ];
+    type TupleString = [ number, string ];
+}
 
-type TupleString = [ number, string ];
-
-class MultiAddr {
+declare class MultiAddr {
     constructor (addr: MultiAddr | Buffer | string);
 
     static isMultiAddr (addr: any): addr is MultiAddr;
@@ -42,15 +41,16 @@ class MultiAddr {
     getPeerId (): PeerId;
     inspect (): string;
     isThinWaistAddress (other?: MultiAddr): boolean;
-    nodeAddress (): Address;
-    protos (): Proto[];
+    nodeAddress (): MultiAddr.Address;
+    protos (): MultiAddr.Proto[];
     protoCodes (): number[];
     protoNames (): string[];
-    stringTuples (): TupleString[];
-    tuples (): Tuple[];
-    toOptions (): Options;
+    stringTuples (): MultiAddr.TupleString[];
+    tuples (): MultiAddr.Tuple[];
+    toOptions (): MultiAddr.Options;
     toString (): string;
 }
 
-export = MultiAddr;
+declare module 'multiaddr' {
+export default MultiAddr;
 }

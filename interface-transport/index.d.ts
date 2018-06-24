@@ -3,7 +3,5 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module 'interface-transport' {
-export interface Transport {
-}
+declare interface LibP2pTransport {
 }

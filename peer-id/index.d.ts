@@ -5,23 +5,24 @@
 
 /// <reference types="node"/>
 
-declare module 'peer-id' {
-type CreateCb = (error: Error | null, peerId?: PeerId) => any;
+declare namespace PeerId {
+    type CreateCb = (error: Error | null, peerId?: PeerId) => any;
 
-type CreateOptions = {
-    bits: number
-};
+    type CreateOptions = {
+        bits: number
+    };
 
-type JSON = {
-    id: string,
-    pubKey: string,
-    privKey: string
-};
+    type JSON = {
+        id: string,
+        pubKey: string,
+        privKey: string
+    };
+}
 
-class PeerId {
+declare class PeerId {
     constructor (id: Buffer, privKey?: any, pubKey?: any);
 
-    static create (optsOrCb: CreateOptions | CreateCb, cb?: CreateCb): PeerId;
+    static create (optsOrCb: PeerId.CreateOptions | PeerId.CreateCb, cb?: PeerId.CreateCb): PeerId;
     static createFromB58String (str: string): PeerId;
     static createFromBytes (buf: Buffer): PeerId;
     static createFromHexString (str: string): PeerId;
@@ -33,8 +34,9 @@ class PeerId {
     toB58String (): string;
     toBytes (): Buffer;
     toHexString (): string;
-    toJSON (): JSON;
+    toJSON (): PeerId.JSON;
 }
 
-export = PeerId;
+declare module 'peer-id' {
+export default PeerId;
 }

@@ -3,11 +3,8 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module 'interface-connection' {
-// @ts-ignore
-import PeerInfo from 'peer-info';
+/// <reference types="../peer-info"/>
 
-export interface Connection {
+declare interface LibP2pConnection {
     getPeerInfo (cb: (error: Error | null, peerInfo?: PeerInfo) => any): void;
-}
 }

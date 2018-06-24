@@ -3,12 +3,11 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module 'libp2p-webrtc-star' {
-// @ts-ignore
-import { Transport } from 'interface-transport';
+/// <reference types="../interface-transport"/>
 
-export class LibP2pWebRtcStar implements Transport {
+declare class LibP2pWebRtcStar implements LibP2pTransport {
 }
 
+declare module 'libp2p-webrtc-star' {
 export default LibP2pWebRtcStar;
 }
