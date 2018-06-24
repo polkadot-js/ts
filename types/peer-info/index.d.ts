@@ -33,6 +33,7 @@ declare class PeerInfo {
     static create (optsOrCb: PeerInfo.CreateOptions | PeerInfo.CreateCb, cb?: PeerInfo.CreateCb): PeerInfo;
     static isPeerInfo (info: any): info is PeerInfo;
 
+    id: PeerId;
     multiaddrs: PeerInfo.MultiAddrSet;
 
     connect (addr: MultiAddr): void;
