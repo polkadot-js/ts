@@ -15,7 +15,9 @@
 /// <reference types="peer-info"/>
 
 declare namespace LibP2p {
-    export type Config = {
+    export type CreateOptions = {};
+
+    export type CreateModules = {
         DHT: typeof LibP2pKadDht,
         connection: {
             crypto: Array<LibP2pSecio>,
@@ -29,7 +31,7 @@ declare namespace LibP2p {
 }
 
 declare class LibP2p {
-    constructor (peerInfo: PeerInfo, PeerBook: PeerBook, options: LibP2p.Config);
+    constructor (modules: LibP2p.CreateModules, peerInfo: PeerInfo, PeerBook: PeerBook, options?: LibP2p.CreateOptions);
 
     dial (peerInfo: PeerInfo, cb: (error: Error | null) => any): void;
     dialProtocol (peerInfo: PeerInfo, protocol: string, cb: (error: Error | null, conn?: LibP2pConnection) => any): void;
