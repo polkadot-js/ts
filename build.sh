@@ -6,6 +6,7 @@
 rm -rf build
 mkdir -p build
 
+cd types
 DIRS=( $(ls -1d *) )
 
 for DIR in "${DIRS[@]}"; do
@@ -13,8 +14,9 @@ for DIR in "${DIRS[@]}"; do
     echo ""
     echo "*** Copying $DIR"
 
-    cp -r $DIR build/
+    cp -r $DIR ../build/
   fi
 done
 
+cd ..
 exit 0

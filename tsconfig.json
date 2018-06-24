@@ -1,3 +1,9 @@
 {
-  "extends": "./node_modules/@polkadot/dev/config/tsconfig"
+  "extends": "./node_modules/@polkadot/dev/config/tsconfig",
+  "compilerOptions": {
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ]
+  }
 }
