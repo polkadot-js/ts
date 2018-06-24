@@ -5,29 +5,35 @@
 
 /// <reference types="node"/>
 
-declare module 'blakejs' {
-type BlakeJsContext = {
-    b: Uint8Array,
-    h: Uint32Array,
-    t: number,
-    c: number,
-    outlen: number
-};
+declare namespace blakejs {
+    type Context = {
+        b: Uint8Array,
+        h: Uint32Array,
+        t: number,
+        c: number,
+        outlen: number
+    };
 
-type BlakeJs = {
-    blake2b: (data: Buffer | Uint8Array | string, key?: Uint8Array | null, outlen?: number) => Uint8Array,
-    blake2bFinal: (context: BlakeJsContext) => Uint8Array,
-    blake2bHex: (data: Buffer | Uint8Array | string, key?: Uint8Array | null, outlen?: number) => string,
-    blake2bInit: (outlen?: number, key?: Uint8Array) => BlakeJsContext,
-    blake2bUpdate: (context: BlakeJsContext, data: Buffer | Uint8Array | string) => void,
-    blake2s: (data: Buffer | Uint8Array | string, key?: Uint8Array | null, outlen?: number) => Uint8Array,
-    blake2sFinal: (context: BlakeJsContext) => Uint8Array,
-    blake2sHex: (data: Buffer | Uint8Array | string, key?: Uint8Array | null, outlen?: number) => string,
-    blake2sInit: (outlen?: number, key?: Uint8Array) => BlakeJsContext,
-    blake2sUpdate: (context: BlakeJsContext, data: Buffer | Uint8Array | string) => void
+    type Data = Buffer | Uint8Array | string;
+
+    type Key = Uint8Array | null;
+
+    interface BlakeJs {
+        blake2b: (data: Data, key?: Key, outlen?: number) => Uint8Array,
+        blake2bFinal: (context: Context) => Uint8Array,
+        blake2bHex: (data: Data, key?: Key, outlen?: number) => string,
+        blake2bInit: (outlen?: number, key?: Key) => Context,
+        blake2bUpdate: (context: Context, data: Data) => void,
+        blake2s: (data: Data, key?: Key, outlen?: number) => Uint8Array,
+        blake2sFinal: (context: Context) => Uint8Array,
+        blake2sHex: (data: Data, key?: Key, outlen?: number) => string,
+        blake2sInit: (outlen?: number, key?: Key) => Context,
+        blake2sUpdate: (context: Context, data: Data) => void
+    }
 }
 
-const blakejs: BlakeJs;
+declare module 'blakejs' {
+const blakejs: blakejs.BlakeJs;
 
 export default blakejs;
 }
