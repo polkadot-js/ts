@@ -4,9 +4,9 @@
 //                 Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module 'leveldown' {
-import { AbstractLevelDown } from 'abstract-leveldown';
+/// <reference types="../abstract-leveldown"/>
 
+declare module 'leveldown' {
 const leveldown: (path: string) => AbstractLevelDown;
 
 export default leveldown;
