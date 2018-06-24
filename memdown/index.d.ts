@@ -4,7 +4,7 @@
 //                 Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-/// <reference types="../abstract-leveldown"/>
+/// <reference types="abstract-leveldown"/>
 
 declare module 'memdown' {
 const memdown: () => AbstractLevelDown;

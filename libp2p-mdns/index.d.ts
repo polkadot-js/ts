@@ -3,7 +3,7 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-/// <reference types="../peer-info"/>
+/// <reference types="peer-info"/>
 
 declare namespace LibP2pMdns {
   type Options = {

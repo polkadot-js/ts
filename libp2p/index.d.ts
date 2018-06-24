@@ -3,16 +3,16 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-/// <reference types="../interface-connection"/>
-/// <reference types="../interface-transport"/>
-/// <reference types="../libp2p-kad-dht"/>
-/// <reference types="../libp2p-mdns"/>
-/// <reference types="../libp2p-mplex"/>
-/// <reference types="../libp2p-railing"/>
-/// <reference types="../libp2p-secio"/>
-/// <reference types="../libp2p-spdy"/>
-/// <reference types="../peer-book"/>
-/// <reference types="../peer-info"/>
+/// <reference types="interface-connection"/>
+/// <reference types="interface-transport"/>
+/// <reference types="libp2p-kad-dht"/>
+/// <reference types="libp2p-mdns"/>
+/// <reference types="libp2p-mplex"/>
+/// <reference types="libp2p-railing"/>
+/// <reference types="libp2p-secio"/>
+/// <reference types="libp2p-spdy"/>
+/// <reference types="peer-book"/>
+/// <reference types="peer-info"/>
 
 declare namespace LibP2p {
     type CreateOptions = {

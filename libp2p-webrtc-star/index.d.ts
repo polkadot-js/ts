@@ -3,7 +3,7 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-/// <reference types="../interface-transport"/>
+/// <reference types="interface-transport"/>
 
 declare class LibP2pWebRtcStar implements LibP2pTransport {
 }

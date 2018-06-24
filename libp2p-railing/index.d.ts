@@ -3,8 +3,8 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-/// <reference types="../multiaddr"/>
-/// <reference types="../peer-info"/>
+/// <reference types="multiaddr"/>
+/// <reference types="peer-info"/>
 
 declare namespace LibP2pRailing {
   type Options = {

@@ -4,8 +4,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 /// <reference types="node"/>
-/// <reference types="../multiaddr"/>
-/// <reference types="../peer-id"/>
+/// <reference types="multiaddr"/>
+/// <reference types="peer-id"/>
 
 declare namespace PeerInfo {
     type CreateCb = (error: Error | null, peerId?: PeerId) => any;
