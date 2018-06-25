@@ -4,6 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 /// <reference types="node"/>
+/// <reference types="libp2p-crypto"/>
 
 declare namespace PeerId {
     type CreateCb = (error: Error | null, peerId?: PeerId) => any;
@@ -20,7 +21,7 @@ declare namespace PeerId {
 }
 
 declare class PeerId {
-    constructor (id: Buffer, privKey?: any, pubKey?: any);
+    constructor (id: Buffer, privKey?: LibP2pCrypto.PrivateKey, pubKey?: LibP2pCrypto.PublicKey);
 
     static create (optsOrCb: PeerId.CreateOptions | PeerId.CreateCb, cb?: PeerId.CreateCb): PeerId;
     static createFromB58String (str: string): PeerId;

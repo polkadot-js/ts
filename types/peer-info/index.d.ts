@@ -15,7 +15,7 @@ declare namespace PeerInfo {
     };
 
     type MultiAddrSet = {
-        size: number;
+        readonly size: number;
 
         add (addr: MultiAddr | string): void;
         addSafe (add: MultiAddr | string): void;
@@ -33,8 +33,8 @@ declare class PeerInfo {
     static create (optsOrCb: PeerInfo.CreateOptions | PeerInfo.CreateCb, cb?: PeerInfo.CreateCb): PeerInfo;
     static isPeerInfo (info: any): info is PeerInfo;
 
-    id: PeerId;
-    multiaddrs: PeerInfo.MultiAddrSet;
+    readonly id: PeerId;
+    readonly multiaddrs: PeerInfo.MultiAddrSet;
 
     connect (addr: MultiAddr): void;
     disconnect (): void;
