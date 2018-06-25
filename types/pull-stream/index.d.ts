@@ -6,7 +6,8 @@
 /// <reference types="node"/>
 
 declare module 'pull-stream' {
-type Pull = {
+export type PullStream = {
+    // FIXME this should be actual streams, not 'any'
     (source: any, sink: any): void;
 
     collect: (cb: (error: Error | null, values: Array<Buffer>) => any) => void,
@@ -14,5 +15,7 @@ type Pull = {
     values: (values: Array<string | Buffer>) => void;
 };
 
-export = Pull;
+const pull: PullStream;
+
+export default pull;
 }

@@ -6,11 +6,13 @@
 /// <reference types="node"/>
 
 declare module 'pull-pushable' {
-type Pushable = {
+export type Pushable = {
     push: (buffer: Buffer) => void
 };
 
-type PullPushable = () => Pushable;
+export type PullPushable = () => Pushable;
 
-export = PullPushable;
+const pushable: PullPushable;
+
+export default pushable;
 }
