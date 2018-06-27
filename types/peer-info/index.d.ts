@@ -14,16 +14,16 @@ declare namespace PeerInfo {
         bits: number
     };
 
-    type MultiAddrSet = {
+    type MultiaddrSet = {
         readonly size: number;
 
-        add (addr: MultiAddr | string): void;
-        addSafe (add: MultiAddr | string): void;
-        delete (addr: MultiAddr): void;
-        forEach (cb: (addr: MultiAddr, index: number) => any): void;
-        has (addr: MultiAddr): boolean;
-        replace (addr: MultiAddr, other: MultiAddr): void;
-        toArray (): MultiAddr[];
+        add (addr: Multiaddr.Multiaddr | string): void;
+        addSafe (add: Multiaddr.Multiaddr | string): void;
+        delete (addr: Multiaddr.Multiaddr): void;
+        forEach (cb: (addr: Multiaddr.Multiaddr, index: number) => any): void;
+        has (addr: Multiaddr.Multiaddr): boolean;
+        replace (addr: Multiaddr.Multiaddr, other: Multiaddr.Multiaddr): void;
+        toArray (): Multiaddr.Multiaddr[];
     };
 }
 
@@ -34,9 +34,9 @@ declare class PeerInfo {
     static isPeerInfo (info: any): info is PeerInfo;
 
     readonly id: PeerId;
-    readonly multiaddrs: PeerInfo.MultiAddrSet;
+    readonly multiaddrs: PeerInfo.MultiaddrSet;
 
-    connect (addr: MultiAddr): void;
+    connect (addr: Multiaddr.Multiaddr): void;
     disconnect (): void;
     isConnected (): boolean;
 }

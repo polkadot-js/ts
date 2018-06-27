@@ -6,51 +6,80 @@
 /// <reference types="node"/>
 /// <reference types="peer-id"/>
 
-declare namespace MultiAddr {
-    type Address = {
-        family: string,
-        host: string,
-        port: string
-    };
+declare namespace Multiaddr {
+    type Code = number
+    type Size = number
 
-    type Options = Address & {
-        transport: string
-    };
+    type Protocol = {
+      code: Code,
+      size: Size,
+      name: string,
+      resolvable: boolean
+    }
 
-    type Proto = {
-        code: number,
-        name: string,
-        size: number
-    };
+    interface Protocols {
+      (proto: string | number): Protocol;
 
-    type Tuple = [ number, Buffer ];
+      readonly lengthPrefixedVarSize: number;
+      readonly V: number;
+      readonly table: Array<[number, number, string]>;
+      readonly names: { [index: string]: Protocol };
+      readonly codes: { [index: number]: Protocol };
 
-    type TupleString = [ number, string ];
-}
+      object(code: Code, size: Size, name: string, resolvable: boolean): Protocol;
+    }
 
-declare class MultiAddr {
-    constructor (addr: MultiAddr | Buffer | string);
+    type Options = {
+      family: string,
+      host: string,
+      transport: string,
+      port: string
+    }
 
-    static isMultiAddr (addr: any): addr is MultiAddr;
-    static isName (other: MultiAddr): boolean;
-    static fromNodeAddress (addr: { address: string, port: string }, transport: string): MultiAddr;
+    type NodeAddress = {
+      family: string,
+      address: string,
+      port: string
+    }
 
-    decapsulate (other: MultiAddr): MultiAddr;
-    encapsulate (other: MultiAddr): MultiAddr;
-    equals (other: MultiAddr): boolean;
-    getPeerId (): PeerId;
-    inspect (): string;
-    isThinWaistAddress (other?: MultiAddr): boolean;
-    nodeAddress (): MultiAddr.Address;
-    protos (): MultiAddr.Proto[];
-    protoCodes (): number[];
-    protoNames (): string[];
-    stringTuples (): MultiAddr.TupleString[];
-    tuples (): MultiAddr.Tuple[];
-    toOptions (): MultiAddr.Options;
-    toString (): string;
-}
+    interface Multiaddr {
+      readonly buffer: Buffer;
+
+      toString(): string;
+      toOptions(): Options;
+      inspect(): string;
+      protos(): Protocol[];
+      protoCodes(): Code[];
+      protoNames(): string[];
+      tuples(): Array<[Code, Buffer]>;
+      stringTuples(): Array<[Code, string | number]>;
+      encapsulate(addr: string | Buffer | Multiaddr): Multiaddr;
+      decapsulate(addr: string | Buffer | Multiaddr): Multiaddr;
+      getPeerId(): string | undefined;
+      equals(other: Multiaddr): boolean;
+      nodeAddress(): NodeAddress;
+      isThinWaistAddress(addr: Multiaddr): boolean;
+      fromStupidString(str: string): never;
+    }
+
+    interface Exports {
+      (addr: string | Buffer | Multiaddr): Multiaddr;
+
+      readonly Buffer: typeof Buffer;
+      readonly protocols: Protocols;
+
+      fromNodeAddress(addr: NodeAddress, transport: string): Multiaddr;
+      isMultiaddr(addr: any): boolean;
+      isName(name: any): boolean;
+      resolve(value: any, cb: (error: Error) => void): void;
+    }
+  }
 
 declare module 'multiaddr' {
-export default MultiAddr;
+const multiaddr: Multiaddr.Exports
+
+export type Multiaddr = Multiaddr.Multiaddr
+export type Protocol = Multiaddr.Protocol
+
+export default multiaddr
 }

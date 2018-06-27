@@ -8,7 +8,7 @@
 
 declare namespace LibP2pRailing {
   type Options = {
-    list: Array<string | MultiAddr>,
+    list: Array<string | Multiaddr.Multiaddr>,
     interval?: number
   };
 
