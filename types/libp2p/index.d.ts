@@ -1,4 +1,4 @@
-// Type definitions for libp2p 0.20.4
+// Type definitions for libp2p 0.22.0
 // Project: https://github.com/libp2p/js-libp2p
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
@@ -15,23 +15,55 @@
 /// <reference types="peer-info"/>
 
 declare namespace LibP2p {
-    export type CreateOptions = {};
-
-    export type CreateModules = {
-        DHT: typeof LibP2pKadDht,
-        connection: {
-            crypto: Array<LibP2pSecio>,
-            muxer: Array<LibP2pMplex | LibP2pSpdy>
+    export type OptionsConfig = {
+        dht?: {
+            kBucketSize?: number
         },
-        discovery: Array<LibP2pRailing | LibP2pMdns>,
+        EXPERIMENTAL?: {
+            pubsub?: boolean,
+            dht?: boolean
+        },
+        peerDiscovery?: {
+            mdns?: {
+                interval?: number
+                enabled?: boolean
+            },
+            webrtcStar?: {
+                interval?: number
+                enabled?: boolean
+            }
+        },
+        peerRouting?: {},
+        contentRouting?: {},
+        relay: {
+            enabled?: boolean,
+            hop?: {
+                enabled?: boolean,
+                active?: boolean
+            }
+        }
+    };
+
+    export type OptionsModules = {
+        connEncryption: Array<LibP2pSecio>,
+        streamMuxer: Array<LibP2pMplex | LibP2pSpdy>,
+        dht?: typeof LibP2pKadDht,
+        peerDiscovery: Array<LibP2pRailing | LibP2pMdns>,
         transport: LibP2pTransport[]
+    };
+
+    export type Options = {
+        config: OptionsConfig,
+        modules: OptionsModules,
+        peerBook?: PeerBook,
+        peerInfo: PeerInfo,
     };
 
     export type Events = 'peer:connect' | 'peer:disconnect' | 'peer:discovery' | 'start' | 'stop';
 }
 
 declare class LibP2p {
-    constructor (modules: LibP2p.CreateModules, peerInfo: PeerInfo, PeerBook: PeerBook, options?: LibP2p.CreateOptions);
+    constructor (options: LibP2p.Options);
 
     dial (peerInfo: PeerInfo, cb: (error: Error | null) => any): void;
     dialProtocol (peerInfo: PeerInfo, protocol: string, cb: (error: Error | null, conn?: LibP2pConnection) => any): void;
