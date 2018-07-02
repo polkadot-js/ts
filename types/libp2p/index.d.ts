@@ -35,7 +35,7 @@ declare namespace LibP2p {
         },
         peerRouting?: {},
         contentRouting?: {},
-        relay: {
+        relay?: {
             enabled?: boolean,
             hop?: {
                 enabled?: boolean,
