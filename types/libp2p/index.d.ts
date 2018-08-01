@@ -70,6 +70,7 @@ declare class LibP2p {
     handle (protocol: string, handler: (protocol: string, conn: LibP2pConnection) => any, matcher?: (protocol: string, requestedProtocol: string, cb: (error: Error | null, accept: boolean) => void) => any): void;
     isStarted (): boolean;
     on (event: LibP2p.Events, cb: (event: any) => any): void;
+    ping (peerInfo: PeerInfo, callback: (error: Error | null, ping: any) => void): void;
     start (cb: (error: Error | null) => any): void;
     stop (cb: (error: Error | null) => any): void;
 }
