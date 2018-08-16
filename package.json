@@ -15,7 +15,7 @@
     "test": "echo \"No 'yarn run test' available\""
   },
   "devDependencies": {
-    "@polkadot/dev": "^0.20.13",
+    "@polkadot/dev": "^0.20.14",
     "@types/node": "^10.7.1"
   }
 }
