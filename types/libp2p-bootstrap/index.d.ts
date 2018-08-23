@@ -15,7 +15,7 @@ declare namespace LibP2pBootstrap {
   type Events = 'peer';
 }
 
-declare class LibP2pRailing {
+declare class LibP2pBootstrap {
   constructor (options: LibP2pBootstrap.Options);
 
   on (event: LibP2pBootstrap.Events, cb: (peerInfo: PeerInfo) => any): void;
