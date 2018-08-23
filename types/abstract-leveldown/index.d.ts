@@ -3,10 +3,12 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module 'abstract-leveldown' {
-class AbstractLevelDOWN {
+declare class AbstractLevelDOWN {
   constructor (location: string);
 }
+
+declare module 'abstract-leveldown' {
+const AbstractLevelDOWN: AbstractLevelDOWN;
 
 export {
   AbstractLevelDOWN

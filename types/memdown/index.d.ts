@@ -7,7 +7,7 @@
 /// <reference types="abstract-leveldown"/>
 
 declare module 'memdown' {
-const memdown: () => AbstractLevelDown;
+const memdown: () => AbstractLevelDOWN;
 
 export default memdown;
 }

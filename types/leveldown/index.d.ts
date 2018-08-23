@@ -7,7 +7,7 @@
 /// <reference types="abstract-leveldown"/>
 
 declare module 'leveldown' {
-const leveldown: (path: string) => AbstractLevelDown;
+const leveldown: (path: string) => AbstractLevelDOWN;
 
 export default leveldown;
 }
