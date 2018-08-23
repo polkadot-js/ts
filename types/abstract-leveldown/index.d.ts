@@ -3,5 +3,12 @@
 // Definitions by: Jaco Greeff <https://github.com/jacogr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare interface AbstractLevelDown {
+declare module 'abstract-leveldown' {
+class AbstractLevelDOWN {
+  constructor (location: string);
+}
+
+export {
+  AbstractLevelDOWN
+};
 }
