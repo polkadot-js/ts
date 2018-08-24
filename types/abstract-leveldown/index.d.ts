@@ -8,7 +8,7 @@ declare class AbstractLevelDOWN {
 }
 
 declare module 'abstract-leveldown' {
-const AbstractLevelDOWN: AbstractLevelDOWN;
+type AbstractLevelDOWN = typeof AbstractLevelDOWN;
 
 export {
   AbstractLevelDOWN
