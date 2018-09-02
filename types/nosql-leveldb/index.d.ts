@@ -22,7 +22,7 @@ declare module 'nosql-leveldb' {
         sync?: boolean
     };
 
-    interface LevelDb {
+    export interface LevelDb {
         openSync (options?: LevelDbOptions$Open): void;
         closeSync (): void;
 
