@@ -27,7 +27,7 @@ declare module 'nosql-leveldb' {
         closeSync (): void;
 
         delSync (key: Buffer | string): void;
-        getSync (key: Buffer | string, options?: LevelDbOptions$Get): Buffer;
+        getSync (key: Buffer | string, options?: LevelDbOptions$Get): Buffer | string;
         putSync (key: Buffer | string, value: Buffer | string, options?: LevelDbOptions$Put): void;
     }
 
