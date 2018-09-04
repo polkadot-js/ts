@@ -10,7 +10,7 @@ export type Pushable = {
     push: (buffer: Buffer) => void
 };
 
-export type PullPushable = () => Pushable;
+export type PullPushable = (errorHandler?: (error: Error) => void) => Pushable;
 
 const pushable: PullPushable;
 
