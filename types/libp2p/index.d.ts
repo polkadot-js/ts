@@ -63,6 +63,8 @@ declare namespace LibP2p {
 }
 
 declare class LibP2p {
+    readonly _dht: LibP2pKadDht;
+
     constructor (options: LibP2p.Options);
 
     dial (peerInfo: PeerInfo, cb: (error: Error | null) => any): void;
