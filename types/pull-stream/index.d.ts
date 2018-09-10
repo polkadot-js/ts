@@ -11,7 +11,7 @@ export type PullStream = {
     (source: any, sink: any): void;
 
     collect: (cb: (error: Error | null, values: Array<Buffer>) => any) => void,
-    drain: (handler: (message: Buffer) => void, errorHandler?: () => boolean) => void;
+    drain: (handler: (message: Buffer) => void, errorHandler?: (error: Error) => boolean) => void;
     values: (values: Array<string | Buffer>) => void;
 };
 
