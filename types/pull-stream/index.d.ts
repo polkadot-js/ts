@@ -8,7 +8,7 @@
 declare module 'pull-stream' {
 export type PullStream = {
     // FIXME this should be actual streams, not 'any'
-    (source: any, sink: any): void;
+    (...streams: Array<any>): void;
 
     collect: (cb: (error: Error | null, values: Array<Buffer>) => any) => void,
     drain: (handler: (message: Buffer) => void, errorHandler?: (error: Error) => boolean) => void;
