@@ -12,6 +12,7 @@ type Options = {
 
 export type Handshake = {
     handshake: {
+        abort: () => void;
         read: (length: number, cb: (error: Error, buffer: Buffer) => void) => void;
         write: (buffer: Buffer) => void;
     }
