@@ -65,18 +65,20 @@ declare namespace LibP2p {
 declare class LibP2p {
     readonly _dht: LibP2pKadDht;
 
-    constructor (options: LibP2p.Options);
+    constructor(options: LibP2p.Options);
 
-    dial (peerInfo: PeerInfo, cb: (error: Error | null) => any): void;
-    dialProtocol (peerInfo: PeerInfo, protocol: string, cb: (error: Error | null, conn?: LibP2pConnection) => any): void;
-    handle (protocol: string, handler: (protocol: string, conn: LibP2pConnection) => any, matcher?: (protocol: string, requestedProtocol: string, cb: (error: Error | null, accept: boolean) => void) => any): void;
-    isStarted (): boolean;
-    on (event: LibP2p.Events, cb: (event: any) => any): void;
-    ping (peerInfo: PeerInfo, callback: (error: Error | null, ping: any) => void): void;
-    start (cb: (error: Error | null) => any): void;
-    stop (cb: (error: Error | null) => any): void;
+    readonly peerInfo: PeerInfo;
+
+    dial(peerInfo: PeerInfo, cb: (error: Error | null) => any): void;
+    dialProtocol(peerInfo: PeerInfo, protocol: string, cb: (error: Error | null, conn?: LibP2pConnection) => any): void;
+    handle(protocol: string, handler: (protocol: string, conn: LibP2pConnection) => any, matcher?: (protocol: string, requestedProtocol: string, cb: (error: Error | null, accept: boolean) => void) => any): void;
+    isStarted(): boolean;
+    on(event: LibP2p.Events, cb: (event: any) => any): void;
+    ping(peerInfo: PeerInfo, callback: (error: Error | null, ping: any) => void): void;
+    start(cb: (error: Error | null) => any): void;
+    stop(cb: (error: Error | null) => any): void;
 }
 
 declare module 'libp2p' {
-export default LibP2p;
+    export default LibP2p;
 }
