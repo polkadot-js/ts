@@ -6,8 +6,9 @@
 /// <reference types="interface-transport"/>
 
 declare class LibP2pWebRtcStar implements LibP2pTransport {
+    constructor(config?: any);
 }
 
 declare module 'libp2p-webrtc-star' {
-export default LibP2pWebRtcStar;
+    export default LibP2pWebRtcStar;
 }

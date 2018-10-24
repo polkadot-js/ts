@@ -31,13 +31,23 @@ declare namespace LibP2pCrypto {
     };
   }
 
+  interface Cipher {
+    encrypt(data: Buffer, cb: (err?: Error, data?: Buffer) => void): void;
+    decrypt(data: Buffer, cb: (err?: Error, data?: Buffer) => void): void;
+  }
+
+  interface AES {
+    create(key: Buffer, iv: Buffer, cb: (err?: Error, cipher?: Cipher) => void): void;
+  }
+
   interface Crypto {
-    readonly keys: Keys
+    readonly keys: Keys,
+    readonly aes: AES
   }
 }
 
 declare module 'libp2p-crypto' {
-const crypto: LibP2pCrypto.Crypto;
+  const crypto: LibP2pCrypto.Crypto;
 
-export default crypto;
+  export default crypto;
 }
