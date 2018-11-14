@@ -14,9 +14,6 @@
     "check": "tsc --noEmit",
     "test": "echo \"No 'yarn run test' available\""
   },
-  "dependencies": {
-    "@types/node": "^10.12.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@polkadot/dev": "^0.21.6"
