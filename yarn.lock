@@ -1332,10 +1332,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
   integrity sha512-LAQ1d4OPfSJ/BMbI2DuizmYrrkD9JMaTdi2hQTlI53lQ4kRQPyZQRS4CYQ7O66bnBBnP/oYdRxbk++X0xuFU6A==
 
-"@polkadot/dev@^0.22.6":
-  version "0.22.6"
-  resolved "https://registry.yarnpkg.com/@polkadot/dev/-/dev-0.22.6.tgz#96a0930815eb687a1050428f8951ac4ad53b3c81"
-  integrity sha512-+WSlRZ/CkCa582ETaCetpLWb9BzpZH+RVPdb9EH3jiYPm3w2XEAw3aXn2xGbMZOCH8fnEpAfHbmgITTcfldxyw==
+"@polkadot/dev@^0.22.9":
+  version "0.22.9"
+  resolved "https://registry.yarnpkg.com/@polkadot/dev/-/dev-0.22.9.tgz#4b0e938e0dacc2da66454d35a0dbdd8d3c151512"
+  integrity sha512-9G5xX5wby/v17ID/Lc1MbIuCBNepjIE/wSpxmFj7Ja1YaQIatroP6lF/oIBBKp4vpXMpYT99WtP9Afs0Zrcm/g==
   dependencies:
     "@babel/cli" "^7.1.5"
     "@babel/core" "^7.1.6"
