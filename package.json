@@ -15,7 +15,7 @@
     "test": "echo \"No 'yarn run test' available\""
   },
   "devDependencies": {
-    "@babel/core": "^7.1.6",
-    "@polkadot/dev": "^0.22.10"
+    "@babel/core": "^7.2.0",
+    "@polkadot/dev": "^0.22.11"
   }
 }
