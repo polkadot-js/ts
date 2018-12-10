@@ -7,7 +7,7 @@
   "license": "ISC",
   "resolutions": {
     "babel-core": "^7.0.0-bridge.0",
-    "typescript": "^3.2.1"
+    "typescript": "^3.2.2"
   },
   "scripts": {
     "build": "./build.sh",
@@ -16,6 +16,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
-    "@polkadot/dev": "^0.22.9"
+    "@polkadot/dev": "^0.22.10"
   }
 }
