@@ -6,6 +6,11 @@ In general, updates here should have corrsponding PRs on the DefinitelyTyped rep
 
 # libraries
 
-This following libraries are currently awaiting external merges.
+This following libraries are currently awaiting external merges or have been replaced by upstream.
 
-- ~~[bn.js](https://github.com/indutny/bn.js) [@types PR #26717](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/26717)~~
+- https://www.npmjs.com/package/@types/abstract-leveldown
+- https://www.npmjs.com/package/@types/bn.js
+- https://www.npmjs.com/package/@types/leveldown
+- https://www.npmjs.com/package/@types/memdown
+- https://www.npmjs.com/package/@types/store
+- https://www.npmjs.com/package/@types/varint
