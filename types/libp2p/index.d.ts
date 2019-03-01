@@ -13,6 +13,7 @@
 /// <reference types="libp2p-spdy"/>
 /// <reference types="peer-book"/>
 /// <reference types="peer-info"/>
+/// <reference types="pull-mplex"/>
 
 declare namespace LibP2p {
     export type OptionsConfig = {
@@ -46,7 +47,7 @@ declare namespace LibP2p {
 
     export type OptionsModules = {
         connEncryption: Array<LibP2pSecio>,
-        streamMuxer: Array<LibP2pMplex | LibP2pSpdy>,
+        streamMuxer: Array<LibP2pMplex | LibP2pSpdy | PullMplex>,
         dht?: typeof LibP2pKadDht,
         peerDiscovery: Array<LibP2pBootstrap | LibP2pMdns>,
         transport: LibP2pTransport[]
