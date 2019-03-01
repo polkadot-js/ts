@@ -12,5 +12,5 @@
         "noEmit": true,
         "forceConsistentCasingInFileNames": true
     },
-    "files": ["index.d.ts", "libp2p-mplex-tests.ts"]
+    "files": ["index.d.ts", "pull-mplex-tests.ts"]
 }
