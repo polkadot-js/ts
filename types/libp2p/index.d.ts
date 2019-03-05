@@ -29,8 +29,11 @@ declare namespace LibP2p {
                 interval?: number
                 enabled?: boolean
             },
-            webrtcStar?: {
+            webRTCStar?: {
                 interval?: number
+                enabled?: boolean
+            },
+            websocketStar?: {
                 enabled?: boolean
             }
         },
@@ -49,7 +52,7 @@ declare namespace LibP2p {
         connEncryption: Array<LibP2pSecio>,
         streamMuxer: Array<LibP2pMplex | LibP2pSpdy | PullMplex>,
         dht?: typeof LibP2pKadDht,
-        peerDiscovery: Array<LibP2pBootstrap | LibP2pMdns>,
+        peerDiscovery: Array<LibP2pBootstrap>,
         transport: LibP2pTransport[]
     };
 
