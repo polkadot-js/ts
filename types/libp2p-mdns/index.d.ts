@@ -4,6 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 /// <reference types="peer-info"/>
+/// <reference types="libp2p-bootstrap"/>
 
 declare namespace LibP2pMdns {
   type Options = {
@@ -17,7 +18,7 @@ declare namespace LibP2pMdns {
   type Events = 'peer';
 }
 
-declare class LibP2pMdns {
+declare class LibP2pMdns extends LibP2pBootstrap {
   constructor (options: LibP2pMdns.Options);
 
   on (event: LibP2pMdns.Events, cb: (peerInfo: PeerInfo) => any): void;
