@@ -18,7 +18,7 @@ declare namespace LibP2pBootstrap {
 declare class LibP2pBootstrap {
   constructor (options: LibP2pBootstrap.Options);
 
-  on (event: LibP2pBootstrap.Events, cb: (peerInfo: PeerInfo) => any): void;
+  on (event: LibP2pBootstrap.Events, cb: (peerInfo: PeerInfo) => any): this;
 }
 
 declare module 'libp2p-bootstrap' {

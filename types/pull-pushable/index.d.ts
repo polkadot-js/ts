@@ -8,6 +8,7 @@
 declare module 'pull-pushable' {
 export type Pushable = {
     push: (buffer: Buffer) => void
+    end: (end?: any) => void
 };
 
 export type PullPushable = (errorHandler?: (error: Error) => void) => Pushable;

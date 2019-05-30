@@ -25,6 +25,11 @@ declare namespace LibP2p {
             dht?: boolean
         },
         peerDiscovery?: {
+            bootstrap?: {
+                interval?: number
+                enabled?: boolean
+                list: Multiaddr.Multiaddr[]
+            },
             mdns?: {
                 interval?: number
                 enabled?: boolean
@@ -49,10 +54,10 @@ declare namespace LibP2p {
     };
 
     export type OptionsModules = {
-        connEncryption: Array<LibP2pSecio>,
+        connEncryption?: Array<LibP2pSecio>,
         streamMuxer: Array<LibP2pMplex | LibP2pSpdy | PullMplex>,
         dht?: typeof LibP2pKadDht,
-        peerDiscovery: Array<LibP2pBootstrap>,
+        peerDiscovery: Array<typeof LibP2pBootstrap>,
         transport: LibP2pTransport[]
     };
 
@@ -72,12 +77,17 @@ declare class LibP2p {
     constructor(options: LibP2p.Options);
 
     readonly peerInfo: PeerInfo;
+    readonly peerBook: PeerBook;
 
     dial(peerInfo: PeerInfo, cb: (error: Error | null) => any): void;
     dialProtocol(peerInfo: PeerInfo | Multiaddr.Multiaddr, protocol: string, cb: (error: Error | null, conn?: LibP2pConnection) => any): void;
+    hangUp(peerInfo: PeerInfo, cb: (error: Error | null) => any): void;
     handle(protocol: string, handler: (protocol: string, conn: LibP2pConnection) => any, matcher?: (protocol: string, requestedProtocol: string, cb: (error: Error | null, accept: boolean) => void) => any): void;
+    unhandle(protocol: string): void;
     isStarted(): boolean;
-    on(event: LibP2p.Events, cb: (event: any) => any): void;
+    on(event: LibP2p.Events, cb: (event: any) => any): this;
+    once(event: LibP2p.Events, cb: (event: any) => any): this;
+    removeListener(event: LibP2p.Events, cb: (event: any) => any): this;
     ping(peerInfo: PeerInfo, callback: (error: Error | null, ping: any) => void): void;
     start(cb: (error: Error | null) => any): void;
     stop(cb: (error: Error | null) => any): void;
