@@ -21,7 +21,7 @@ declare namespace LibP2pMdns {
 declare class LibP2pMdns extends LibP2pBootstrap {
   constructor (options: LibP2pMdns.Options);
 
-  on (event: LibP2pMdns.Events, cb: (peerInfo: PeerInfo) => any): void;
+  on (event: LibP2pMdns.Events, cb: (peerInfo: PeerInfo) => any): this;
 }
 
 declare module 'libp2p-mdns' {
