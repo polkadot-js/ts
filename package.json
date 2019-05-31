@@ -7,7 +7,7 @@
   "license": "ISC",
   "resolutions": {
     "babel-core": "^7.0.0-bridge.0",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.5.1"
   },
   "scripts": {
     "build": "./build.sh",
@@ -15,7 +15,7 @@
     "test": "echo \"No 'yarn run test' available\""
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@polkadot/dev": "^0.25.12"
+    "@babel/core": "^7.4.5",
+    "@polkadot/dev": "0.25.13"
   }
 }
