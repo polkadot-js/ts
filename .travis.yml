@@ -9,4 +9,4 @@ cache:
   directories:
     - node_modules
 script:
-  - yarn polkadot-dev-build-travis
+  - CI_NO_BETA=true yarn polkadot-dev-travis-build
