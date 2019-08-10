@@ -1,9 +1,9 @@
-[![polkadotjs](https://img.shields.io/badge/polkadot-js-orange.svg?style=flat-square)](https://polkadot.js.org)
-![license](https://img.shields.io/github/license/polkadot-js/ts?style=flat-square)
-[![npm](https://img.shields.io/npm/v/@polkadot/ts.svg?style=flat-square)](https://www.npmjs.com/package/@polkadot/ts)
-[![travisci](https://img.shields.io/travis/com/polkadot-js/ts?label=travisci&style=flat-square)](https://travis-ci.com/polkadot-js/ts)
-[![circleci](https://img.shields.io/circleci/build/github/polkadot-js/ts/master?label=circleci&style=flat-square)](https://circleci.com/gh/polkadot-js/ts)
-[![greenkeeper](https://img.shields.io/badge/greenkeeper-enabled-brightgreen.svg?style=flat-square)](https://greenkeeper.io/)
+[![polkadotjs](https://img.shields.io/badge/polkadot-js-orange?label=&style=for-the-badge)](https://polkadot.js.org)
+![license](https://img.shields.io/badge/License-Apache%202.0-blue?label=&logo=apache&style=for-the-badge)
+[![npm](https://img.shields.io/npm/v/@polkadot/ts?label=&logo=npm&style=for-the-badge)](https://www.npmjs.com/package/@polkadot/ts)
+[![travisci](https://img.shields.io/travis/com/polkadot-js/ts?label=&logo=travis&style=for-the-badge)](https://travis-ci.com/polkadot-js/ts)
+[![circleci](https://img.shields.io/circleci/build/github/polkadot-js/ts/master?label=&logo=circleci&style=for-the-badge)](https://circleci.com/gh/polkadot-js/ts)
+[![greenkeeper](https://img.shields.io/badge/greenkeeper-enabled-brightgreen?label=&logo=greenkeeper&style=for-the-badge)](https://greenkeeper.io/)
 
 # @polkadot/ts
 
