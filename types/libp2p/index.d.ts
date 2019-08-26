@@ -82,7 +82,7 @@ declare class LibP2p {
     readonly peerInfo: PeerInfo;
     readonly peerBook: PeerBook;
 
-    dial(peerInfo: PeerInfo): Promise<void>;
+    dial(peerInfo: PeerInfo): Promise<LibP2pConnection>;
     dialProtocol(peerInfo: PeerInfo | Multiaddr.Multiaddr, protocol: string): Promise<LibP2pConnection>;
     hangUp(peerInfo: PeerInfo): Promise<void>;
     handle(protocol: string, handler: (protocol: string, conn: LibP2pConnection) => any, matcher?: (protocol: string, requestedProtocol: string, cb: (error: Error | null, accept: boolean) => void) => any): void;
