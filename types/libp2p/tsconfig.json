@@ -12,5 +12,5 @@
         "noEmit": true,
         "forceConsistentCasingInFileNames": true
     },
-    "files": ["index.d.ts", "bn.js-tests.ts"]
+    "files": ["index.d.ts", "libp2p-tests.ts"]
 }

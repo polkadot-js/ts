@@ -17,18 +17,16 @@
 
 declare namespace LibP2p {
     export type OptionsConfig = {
+        contentRouting?: {},
         dht?: {
             kBucketSize?: number
         },
-        EXPERIMENTAL?: {
-            pubsub?: boolean,
-            dht?: boolean
-        },
         peerDiscovery?: {
+            enabled?: boolean,
             bootstrap?: {
                 interval?: number
                 enabled?: boolean
-                list: Multiaddr.Multiaddr[]
+                list?: Multiaddr.Multiaddr[]
             },
             mdns?: {
                 interval?: number
@@ -43,7 +41,12 @@ declare namespace LibP2p {
             }
         },
         peerRouting?: {},
-        contentRouting?: {},
+        pubsub?: {
+            enabled?: boolean,
+            emitSelf: boolean,
+            signMessages: boolean,
+            strictSigning: boolean
+        },
         relay?: {
             enabled?: boolean,
             hop?: {
@@ -79,18 +82,18 @@ declare class LibP2p {
     readonly peerInfo: PeerInfo;
     readonly peerBook: PeerBook;
 
-    dial(peerInfo: PeerInfo, cb: (error: Error | null) => any): void;
-    dialProtocol(peerInfo: PeerInfo | Multiaddr.Multiaddr, protocol: string, cb: (error: Error | null, conn?: LibP2pConnection) => any): void;
-    hangUp(peerInfo: PeerInfo, cb: (error: Error | null) => any): void;
+    dial(peerInfo: PeerInfo): Promise<void>;
+    dialProtocol(peerInfo: PeerInfo | Multiaddr.Multiaddr, protocol: string): Promise<LibP2pConnection>;
+    hangUp(peerInfo: PeerInfo): Promise<void>;
     handle(protocol: string, handler: (protocol: string, conn: LibP2pConnection) => any, matcher?: (protocol: string, requestedProtocol: string, cb: (error: Error | null, accept: boolean) => void) => any): void;
     unhandle(protocol: string): void;
     isStarted(): boolean;
     on(event: LibP2p.Events, cb: (event: any) => any): this;
     once(event: LibP2p.Events, cb: (event: any) => any): this;
     removeListener(event: LibP2p.Events, cb: (event: any) => any): this;
-    ping(peerInfo: PeerInfo, callback: (error: Error | null, ping: any) => void): void;
-    start(cb: (error: Error | null) => any): void;
-    stop(cb: (error: Error | null) => any): void;
+    ping(peerInfo: PeerInfo): Promise<void>;
+    start(): Promise<void>;
+    stop(): Promise<void>;
 }
 
 declare module 'libp2p' {
