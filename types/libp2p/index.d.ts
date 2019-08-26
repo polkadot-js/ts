@@ -43,9 +43,9 @@ declare namespace LibP2p {
         peerRouting?: {},
         pubsub?: {
             enabled?: boolean,
-            emitSelf: boolean,
-            signMessages: boolean,
-            strictSigning: boolean
+            emitSelf?: boolean,
+            signMessages?: boolean,
+            strictSigning?: boolean
         },
         relay?: {
             enabled?: boolean,
