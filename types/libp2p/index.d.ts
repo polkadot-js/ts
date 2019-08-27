@@ -22,6 +22,7 @@ declare namespace LibP2p {
             kBucketSize?: number
         },
         peerDiscovery?: {
+            autoDial?: boolean,
             enabled?: boolean,
             bootstrap?: {
                 interval?: number
