@@ -1,6 +1,7 @@
 {
   "extends": "./node_modules/@polkadot/dev/config/tsconfig",
   "compilerOptions": {
+    "skipLibCheck": true,
     "typeRoots": [
       "./types",
       "./node_modules/@types"
