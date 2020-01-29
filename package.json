@@ -1,6 +1,6 @@
 {
   "name": "@polkadot/ts",
-  "version": "0.1.91",
+  "version": "0.2.0",
   "description": "Typescript definitions that are not (yet) available on https://github.com/DefinitelyTyped/DefinitelyTyped",
   "repository": "https://github.com/polkadot-js/ts.git",
   "author": "Jaco Greeff <jacogr@gmail.com>",
@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
-    "@polkadot/dev": "^0.32.15"
+    "@polkadot/dev": "^0.33.1"
   }
 }
