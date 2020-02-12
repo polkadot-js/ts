@@ -6,7 +6,6 @@
   "author": "Jaco Greeff <jacogr@gmail.com>",
   "license": "ISC",
   "resolutions": {
-    "babel-core": "^7.0.0-bridge.0",
     "typescript": "^3.7.5"
   },
   "scripts": {
@@ -15,10 +14,10 @@
     "test": "echo \"No 'yarn run test' available\""
   },
   "dependencies": {
-    "@types/chrome": "^0.0.92"
+    "@types/chrome": "^0.0.95"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.3",
-    "@polkadot/dev": "^0.33.1"
+    "@babel/core": "^7.8.4",
+    "@polkadot/dev": "^0.34.1"
   }
 }
