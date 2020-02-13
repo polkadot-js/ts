@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "./build.sh",
-    "lint": "tsc --noEmit --pretty",
+    "lint": "polkadot-dev-run-lint --skip-eslint",
     "test": "echo \"No 'yarn run test' available\""
   },
   "dependencies": {
@@ -18,6 +18,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
-    "@polkadot/dev": "^0.34.1"
+    "@polkadot/dev": "^0.40.3"
   }
 }
