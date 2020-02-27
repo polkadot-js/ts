@@ -1,3 +1,7 @@
+# 0.3.1
+
+- Yarn 2
+
 # 0.2.1
 
 - Ready for downstream major bumps
