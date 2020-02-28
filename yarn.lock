@@ -2521,9 +2521,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/dev@npm:^0.50.4":
-  version: 0.50.4
-  resolution: "@polkadot/dev@npm:0.50.4"
+"@polkadot/dev@npm:^0.50.5":
+  version: 0.50.5
+  resolution: "@polkadot/dev@npm:0.50.5"
   dependencies:
     "@babel/cli": ^7.8.4
     "@babel/core": ^7.8.4
@@ -2597,7 +2597,7 @@ __metadata:
     polkadot-dev-run-test: scripts/polkadot-dev-run-test.js
     polkadot-dev-version: scripts/polkadot-dev-version.js
     polkadot-dev-yarn-only: scripts/polkadot-dev-yarn-only.js
-  checksum: 2/7a7102d6d369a30a209308ae0fb05a6526e528ec458cab27659bfc74299ff4d9533d5081f4750d35703e181d1aa162ff7e5d39c3518d23c1963ff0ec40e8f1cb
+  checksum: 2/4b796cde2c58c4270487b887676485df912b9ee6c1f1383eb64c63b866df47555533128065ba46636f6e083ca85d4534b3560b5148419afd1400a521ef7e4cd1
   languageName: node
   linkType: hard
 
@@ -2606,7 +2606,7 @@ __metadata:
   resolution: "@polkadot/ts@workspace:."
   dependencies:
     "@babel/core": ^7.8.4
-    "@polkadot/dev": ^0.50.4
+    "@polkadot/dev": ^0.50.5
     "@types/chrome": ^0.0.95
   languageName: unknown
   linkType: soft
