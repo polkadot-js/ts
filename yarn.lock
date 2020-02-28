@@ -49,7 +49,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.1.0, @babel/core@npm:^7.7.5, @babel/core@npm:^7.8.4":
+"@babel/core@npm:^7.1.0, @babel/core@npm:^7.7.5, @babel/core@npm:^7.8.4, @babel/core@npm:^7.8.6":
   version: 7.8.6
   resolution: "@babel/core@npm:7.8.6"
   dependencies:
@@ -2521,9 +2521,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/dev@npm:^0.50.7":
-  version: 0.50.7
-  resolution: "@polkadot/dev@npm:0.50.7"
+"@polkadot/dev@npm:^0.50.9":
+  version: 0.50.9
+  resolution: "@polkadot/dev@npm:0.50.9"
   dependencies:
     "@babel/cli": ^7.8.4
     "@babel/core": ^7.8.4
@@ -2600,7 +2600,12 @@ __metadata:
     polkadot-dev-run-test: scripts/polkadot-dev-run-test.js
     polkadot-dev-version: scripts/polkadot-dev-version.js
     polkadot-dev-yarn-only: scripts/polkadot-dev-yarn-only.js
-  checksum: 2/608587fc823687245732b4137e2fd88fa8006fbdc4519352b32e7ed00223f56f3c58c0650c10d064f6fc9a36f5715edff5057a579976b9fc7fb3bc9a5779ec60
+    polkadot-exec-ghpages: scripts/polkadot-exec-ghpages.js
+    polkadot-exec-tsc: scripts/polkadot-exec-tsc.js
+    polkadot-exec-typedoc: scripts/polkadot-exec-typedoc.js
+    polkadot-exec-vuepress: scripts/polkadot-exec-vuepress.js
+    polkadot-exec-webpack: scripts/polkadot-exe-webpackc.js
+  checksum: 2/e79e3e4011e04398188245e3a80674d3acd8aaec6bd1687c451d432a89a006bbd52ef12eebf8698f52d8b6527823d604de9830561076831973237afe915893fc
   languageName: node
   linkType: hard
 
@@ -2608,9 +2613,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@polkadot/ts@workspace:."
   dependencies:
-    "@babel/core": ^7.8.4
-    "@polkadot/dev": ^0.50.7
-    "@types/chrome": ^0.0.95
+    "@babel/core": ^7.8.6
+    "@polkadot/dev": ^0.50.9
+    "@types/chrome": ^0.0.97
   languageName: unknown
   linkType: soft
 
@@ -2680,12 +2685,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chrome@npm:^0.0.95":
-  version: 0.0.95
-  resolution: "@types/chrome@npm:0.0.95"
+"@types/chrome@npm:^0.0.97":
+  version: 0.0.97
+  resolution: "@types/chrome@npm:0.0.97"
   dependencies:
     "@types/filesystem": "*"
-  checksum: 2/7b4d12714062f9717222de331a491da8be4e33c7bb9340f07804c43daaa5b22e6f54b1d134000b6ce713f8cd17f746bb3e4500f671f5eee1500391ac936d5d4f
+  checksum: 2/b377dba0f6f59dfe7a2e4b6203499a00ff50c0d6c87e741f5bae077a7c0c2bd4cd7de560001272d94cdf9d69d82cc546eba9656407a07d306af7db2e1ea373f1
   languageName: node
   linkType: hard
 
@@ -6624,9 +6629,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.3.361":
-  version: 1.3.362
-  resolution: "electron-to-chromium@npm:1.3.362"
-  checksum: 2/c465941ec55a5d5958de203e7ad85413dbd7496561dd81079e82ea6f26ff0a74998e4a23eb07d091aa0d41a9722cdddeca1e737db2867e017d1060cc86382749
+  version: 1.3.363
+  resolution: "electron-to-chromium@npm:1.3.363"
+  checksum: 2/33664669d5dc0f2dea5a186954b23753c7e06cc210c919c71964a97c7a27a8e09d8e2ddf55bd1f557cee0cdcce6f67e224aadf8fee9e21a14aec56601123be5d
   languageName: node
   linkType: hard
 
@@ -16452,8 +16457,8 @@ __metadata:
   linkType: hard
 
 "typedoc@npm:^0.16.10":
-  version: 0.16.10
-  resolution: "typedoc@npm:0.16.10"
+  version: 0.16.11
+  resolution: "typedoc@npm:0.16.11"
   dependencies:
     "@types/minimatch": 3.0.3
     fs-extra: ^8.1.0
@@ -16468,7 +16473,7 @@ __metadata:
     typescript: 3.7.x
   bin:
     typedoc: bin/typedoc
-  checksum: 2/90a8ebb71cc14fccf8118090d218cb291120e4d42bfc8c445186966e3ac0675a920853eb5c32e136021b49027bee3501d0a8c4291ebd049866dda10ffcb06473
+  checksum: 2/3715d2546aca4ab7c3d6b6d2eb772bb4df0a7cd1026e2ce047260caf0792e611f09f8555ef6831839648fd83e9b678d1617f86084dc12f286bb86e09c0944b02
   languageName: node
   linkType: hard
 
