@@ -36,8 +36,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: |
-        yarn install
-        CI_NO_BETA=true yarn polkadot-ci-ghact-build
+        yarn install | grep -v 'YN0013'
+        CI_NO_BETA=true node_modules/.bin/polkadot-ci-ghact-build
 
   dummy:
     name: Dummy
