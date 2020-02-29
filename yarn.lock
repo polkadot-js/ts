@@ -2615,7 +2615,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.8.6
     "@polkadot/dev": ^0.50.14
-    "@types/chrome": ^0.0.97
+    "@types/chrome": ^0.0.98
   languageName: unknown
   linkType: soft
 
@@ -2685,12 +2685,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chrome@npm:^0.0.97":
-  version: 0.0.97
-  resolution: "@types/chrome@npm:0.0.97"
+"@types/chrome@npm:^0.0.98":
+  version: 0.0.98
+  resolution: "@types/chrome@npm:0.0.98"
   dependencies:
     "@types/filesystem": "*"
-  checksum: 2/b377dba0f6f59dfe7a2e4b6203499a00ff50c0d6c87e741f5bae077a7c0c2bd4cd7de560001272d94cdf9d69d82cc546eba9656407a07d306af7db2e1ea373f1
+  checksum: 2/28547e07f2aae234c2891d057145f756d92d1d63fb27cc7640e937b847992544a458d10ba9709c40c79c7bdb3030b14b75b345569db810f3517022042bebfe6a
   languageName: node
   linkType: hard
 
@@ -16477,7 +16477,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^3.7.5":
+"typescript@npm:^3.8.3":
   version: 3.8.3
   resolution: "typescript@npm:3.8.3"
   bin:
