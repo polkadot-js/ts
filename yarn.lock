@@ -2521,9 +2521,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/dev@npm:^0.50.11":
-  version: 0.50.11
-  resolution: "@polkadot/dev@npm:0.50.11"
+"@polkadot/dev@npm:^0.50.14":
+  version: 0.50.14
+  resolution: "@polkadot/dev@npm:0.50.14"
   dependencies:
     "@babel/cli": ^7.8.4
     "@babel/core": ^7.8.6
@@ -2605,7 +2605,7 @@ __metadata:
     polkadot-exec-typedoc: scripts/polkadot-exec-typedoc.js
     polkadot-exec-vuepress: scripts/polkadot-exec-vuepress.js
     polkadot-exec-webpack: scripts/polkadot-exe-webpackc.js
-  checksum: 2/9f6d26e3c1cae1ceb3ddd02a01b18a9a4bf5b0c5a39a91c031888ce30382c0aacfc95dc8d3d1bb6fafc35d8aac12d9d67cc1efca36bdc1804702c8a77c695f42
+  checksum: 2/601c6144f3e8b854b81550bd8c1eefa20696162780ec9d9b05b7b5fb01a3ef84492716fb7ba24ba7b5b6eabb824e603e22a95fcc5843d3137e29effeb3ddcba4
   languageName: node
   linkType: hard
 
@@ -2614,7 +2614,7 @@ __metadata:
   resolution: "@polkadot/ts@workspace:."
   dependencies:
     "@babel/core": ^7.8.6
-    "@polkadot/dev": ^0.50.11
+    "@polkadot/dev": ^0.50.14
     "@types/chrome": ^0.0.97
   languageName: unknown
   linkType: soft
@@ -2792,14 +2792,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>= 8":
-  version: 13.7.6
-  resolution: "@types/node@npm:13.7.6"
-  checksum: 2/392fea5104aa326d4707d24061cb4b6c45d4f93a073affe7f5e2c5a1ea782c9bd499073a45ab87b0cce950c36891b84932a1cd7f0aa6c373f0efc6724a64e0ed
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^13.7.6":
+"@types/node@npm:*, @types/node@npm:>= 8, @types/node@npm:^13.7.6":
   version: 13.7.7
   resolution: "@types/node@npm:13.7.7"
   checksum: 2/7a4a7c5060f86b6f4010d10b0de9831f98f303513a7403e8bfb3ad3f1d6a9533d023e1b6e2331959525156b84c0daf98ad1569407309da1f798498301f227a37
@@ -2887,7 +2880,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/typescript-estree@npm:2.21.0":
+"@typescript-eslint/typescript-estree@npm:2.21.0, @typescript-eslint/typescript-estree@npm:^2.4.0":
   version: 2.21.0
   resolution: "@typescript-eslint/typescript-estree@npm:2.21.0"
   dependencies:
@@ -2904,26 +2897,6 @@ __metadata:
     typescript:
       optional: true
   checksum: 2/e6724eea96602ceb3a3747fa4c1a1a93df94d9503a4b846d22fe1c17175890ad9c2dd86609e4d3f154c698ca4b8a21ada0b5ad99b03618f4ce76ee62139b82cf
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/typescript-estree@npm:^2.4.0":
-  version: 2.20.0
-  resolution: "@typescript-eslint/typescript-estree@npm:2.20.0"
-  dependencies:
-    debug: ^4.1.1
-    eslint-visitor-keys: ^1.1.0
-    glob: ^7.1.6
-    is-glob: ^4.0.1
-    lodash: ^4.17.15
-    semver: ^6.3.0
-    tsutils: ^3.17.1
-  peerDependencies:
-    typescript: "*"
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 2/ddf9a2b1365ff73c0c8429eac40bda8c1e8e53aaf4f413589eb1fce259a3f9ca819cd372390ccbc96db929035a44588fc70fc2866557b53ba46f4982047d08b7
   languageName: node
   linkType: hard
 
@@ -4472,20 +4445,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:^4.0.0, browserslist@npm:^4.8.3, browserslist@npm:^4.8.5":
-  version: 4.9.0
-  resolution: "browserslist@npm:4.9.0"
-  dependencies:
-    caniuse-lite: ^1.0.30001030
-    electron-to-chromium: ^1.3.361
-    node-releases: ^1.1.50
-  bin:
-    browserslist: cli.js
-  checksum: 2/b5a7f976c37187ee365de3b25497cea17618d73bad337940c1764cfa0fb4c1b211b88ff445c9439c632efe23380b3a761a1f79f4f1b2320eccd111ce7e7583a5
-  languageName: node
-  linkType: hard
-
-"browserslist@npm:^4.9.0":
+"browserslist@npm:^4.0.0, browserslist@npm:^4.8.3, browserslist@npm:^4.8.5, browserslist@npm:^4.9.0":
   version: 4.9.1
   resolution: "browserslist@npm:4.9.1"
   dependencies:
@@ -6665,13 +6625,6 @@ __metadata:
   version: 1.1.1
   resolution: "ee-first@npm:1.1.1"
   checksum: 2/ba74f91398e3ee3b6d665b2f0d13ad6530e89a7e64ec886a6eec0602fb8a5a274652960e21bd5d4b42fdeb9017d873ff872f50342d38779e955285977edb337c
-  languageName: node
-  linkType: hard
-
-"electron-to-chromium@npm:^1.3.361":
-  version: 1.3.363
-  resolution: "electron-to-chromium@npm:1.3.363"
-  checksum: 2/33664669d5dc0f2dea5a186954b23753c7e06cc210c919c71964a97c7a27a8e09d8e2ddf55bd1f557cee0cdcce6f67e224aadf8fee9e21a14aec56601123be5d
   languageName: node
   linkType: hard
 
@@ -9195,23 +9148,23 @@ __metadata:
   linkType: hard
 
 "inquirer@npm:^7.0.0":
-  version: 7.0.4
-  resolution: "inquirer@npm:7.0.4"
+  version: 7.0.5
+  resolution: "inquirer@npm:7.0.5"
   dependencies:
     ansi-escapes: ^4.2.1
-    chalk: ^2.4.2
+    chalk: ^3.0.0
     cli-cursor: ^3.1.0
     cli-width: ^2.0.0
     external-editor: ^3.0.3
     figures: ^3.0.0
     lodash: ^4.17.15
     mute-stream: 0.0.8
-    run-async: ^2.2.0
+    run-async: ^2.4.0
     rxjs: ^6.5.3
     string-width: ^4.1.0
-    strip-ansi: ^5.1.0
+    strip-ansi: ^6.0.0
     through: ^2.3.6
-  checksum: 2/4a33e940a3b2f656129ec38c961c5514daebe2192b1ac6fd3be7a02cfe601b57701af2df022fb54be9d8a6da5022548b4a82769f73b968ef2f1ee70697f78bdd
+  checksum: 2/cf6c8699629dec1421406c730d38b4fb1491a189fcda351b027fb3f2d00a60c6f5d724956ec59a9b5360f6ae543f6567a58cef4471336e4ab0d9029c13ae06c8
   languageName: node
   linkType: hard
 
@@ -14748,7 +14701,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"run-async@npm:^2.2.0":
+"run-async@npm:^2.2.0, run-async@npm:^2.4.0":
   version: 2.4.0
   resolution: "run-async@npm:2.4.0"
   dependencies:
@@ -16525,12 +16478,12 @@ __metadata:
   linkType: hard
 
 "typescript@npm:^3.7.5":
-  version: 3.8.2
-  resolution: "typescript@npm:3.8.2"
+  version: 3.8.3
+  resolution: "typescript@npm:3.8.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 2/12d822e84f0d1280d7aa7bb9f0e80b756e1e2d61b481bc1aff6e063e4839f3da6367bfae64338906fcb019c43ca82215a00a747f453ca157d72ce337f3825c88
+  checksum: 2/519b11576247fe3570d89a2aa757d8f666aafc0cb9465a6cdd4df09c1dc6bf7285f0c6008d2ac7a55ea26457e767aaab819f58439d80af2cce1d9805b2be1034
   languageName: node
   linkType: hard
 
