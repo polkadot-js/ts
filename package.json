@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
-    "@polkadot/dev": "^0.50.14"
+    "@polkadot/dev": "^0.50.23",
+    "@types/node": "^13.7.7"
   }
 }
