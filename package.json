@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "./build.sh",
+    "build:release": "polkadot-ci-ghact-build --skip-beta",
     "lint": "polkadot-dev-run-lint --skip-eslint",
     "test": "echo \"No 'yarn run test' available\""
   },
