@@ -15,11 +15,11 @@
     "test": "echo \"No 'yarn run test' available\""
   },
   "dependencies": {
-    "@types/chrome": "^0.0.101"
+    "@types/chrome": "^0.0.103"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@polkadot/dev": "^0.52.3",
-    "@types/node": "^13.9.2"
+    "@polkadot/dev": "^0.52.4",
+    "@types/node": "^13.9.8"
   }
 }

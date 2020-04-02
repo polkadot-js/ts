@@ -2580,7 +2580,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/dev@npm:^0.52.3":
+"@polkadot/dev@npm:^0.52.4":
   version: 0.52.4
   resolution: "@polkadot/dev@npm:0.52.4"
   dependencies:
@@ -2672,9 +2672,9 @@ __metadata:
   resolution: "@polkadot/ts@workspace:."
   dependencies:
     "@babel/core": ^7.9.0
-    "@polkadot/dev": ^0.52.3
-    "@types/chrome": ^0.0.101
-    "@types/node": ^13.9.2
+    "@polkadot/dev": ^0.52.4
+    "@types/chrome": ^0.0.103
+    "@types/node": ^13.9.8
   languageName: unknown
   linkType: soft
 
@@ -2744,12 +2744,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chrome@npm:^0.0.101":
-  version: 0.0.101
-  resolution: "@types/chrome@npm:0.0.101"
+"@types/chrome@npm:^0.0.103":
+  version: 0.0.103
+  resolution: "@types/chrome@npm:0.0.103"
   dependencies:
     "@types/filesystem": "*"
-  checksum: 2/ad3906874fa0ef3d5921a5d3b56830cef9d03e286b9c475fd6fa6330ddc105873b7626eb6d7112192471e702e5b86563471b6fbc9152fd2209bbf6c0c88a980b
+    "@types/har-format": "*"
+  checksum: 2/9deebc57c65f5e5023aa417b94ad6345a06aee1a0cf35d610f1f5b43aefe834a86acd81255231001c254675215ebced533eb1002db203d3989551b04fafd8869
   languageName: node
   linkType: hard
 
@@ -2801,6 +2802,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/har-format@npm:*":
+  version: 1.2.4
+  resolution: "@types/har-format@npm:1.2.4"
+  checksum: 2/8d0c62f99ea579b6aa23219f9e97c8ef70dc0254a419b4c9a2c602860f7d3d6da7cb867da4b15087d7bf2588f8dd40b6f941350ba2c04168a67892b5f2661fad
+  languageName: node
+  linkType: hard
+
 "@types/istanbul-lib-coverage@npm:*, @types/istanbul-lib-coverage@npm:^2.0.0, @types/istanbul-lib-coverage@npm:^2.0.1":
   version: 2.0.1
   resolution: "@types/istanbul-lib-coverage@npm:2.0.1"
@@ -2841,7 +2849,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>= 8, @types/node@npm:^13.9.2":
+"@types/node@npm:*, @types/node@npm:>= 8, @types/node@npm:^13.9.8":
   version: 13.9.8
   resolution: "@types/node@npm:13.9.8"
   checksum: 2/72610b1cca1ecb1b28ef493fac3a67975e32a814ec5dac888d55e9374c9475664ec797875ea7cb941b94a5016c9d4b0e4d40e60cc9793ef6aa279d3bd1e41fd3
