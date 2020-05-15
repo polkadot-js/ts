@@ -5,9 +5,6 @@
   "repository": "https://github.com/polkadot-js/ts.git",
   "author": "Jaco Greeff <jacogr@gmail.com>",
   "license": "ISC",
-  "resolutions": {
-    "typescript": "^3.8.3"
-  },
   "scripts": {
     "build": "./build.sh",
     "build:release": "polkadot-ci-ghact-build --skip-beta",
@@ -15,11 +12,11 @@
     "test": "echo \"No 'yarn run test' available\""
   },
   "dependencies": {
-    "@types/chrome": "^0.0.107"
+    "@types/chrome": "^0.0.112"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
-    "@polkadot/dev": "^0.52.17",
-    "@types/node": "^13.13.5"
+    "@polkadot/dev": "^0.53.5",
+    "@types/node": "^14.0.1"
   }
 }
