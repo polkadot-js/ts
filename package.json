@@ -12,11 +12,11 @@
     "test": "echo \"No 'yarn run test' available\""
   },
   "dependencies": {
-    "@types/chrome": "^0.0.117"
+    "@types/chrome": "^0.0.120"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
-    "@polkadot/dev": "^0.55.18",
-    "@types/node": "^14.0.14"
+    "@babel/core": "^7.10.5",
+    "@polkadot/dev": "^0.55.22",
+    "@types/node": "^14.0.23"
   }
 }
