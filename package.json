@@ -18,8 +18,8 @@
     "@types/chrome": "^0.0.122"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.5",
-    "@polkadot/dev": "^0.55.45",
-    "@types/node": "^14.6.3"
+    "@babel/core": "^7.11.6",
+    "@polkadot/dev": "^0.55.46",
+    "@types/node": "^14.6.4"
   }
 }
