@@ -35,5 +35,5 @@ declare namespace blakejs {
 declare module 'blakejs' {
 const blakejs: blakejs.BlakeJs;
 
-export default blakejs;
+export = blakejs;
 }
