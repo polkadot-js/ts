@@ -78,6 +78,23 @@ declare namespace LibP2p {
         | "peer:discovery"
         | "start"
         | "stop";
+
+    export interface PubSubMessage {
+        from: string;
+        data: Uint8Array;
+        seqno: Uint8Array;
+        topicIDs: string[];
+        signature: Uint8Array;
+        key: Uint8Array;
+    }
+
+    export type TopicValidatorHandler = ({
+        topic,
+        msg
+    }: {
+        topic: string;
+        msg: LibP2p.PubSubMessage;
+    }) => any;
 }
 
 declare class LibP2p {
@@ -111,6 +128,30 @@ declare class LibP2p {
     ping(peerInfo: PeerInfo): Promise<void>;
     start(): Promise<void>;
     stop(): Promise<void>;
+    pubsub: {
+        publish: (topic: string, data: Uint8Array) => Promise<void>;
+        subscribe: (topic: string) => void;
+        unsubscribe: (topic: string) => void;
+        on: (
+            topic: string,
+            handler: (msg: LibP2p.PubSubMessage) => any
+        ) => void;
+        removeListener: (
+            topic: string,
+            handler: (msg: LibP2p.PubSubMessage) => any
+        ) => void;
+
+        getSubscribers: (topic: string) => string[];
+        getTopics: () => string[];
+
+        topicValidators: {
+            set: (
+                topic: string,
+                handler: LibP2p.TopicValidatorHandler
+            ) => Map<string, () => LibP2p.TopicValidatorHandler>;
+            delete: (topic: string) => boolean;
+        };
+    };
 }
 
 declare module "libp2p" {
