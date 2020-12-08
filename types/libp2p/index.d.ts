@@ -17,62 +17,67 @@
 
 declare namespace LibP2p {
     export type OptionsConfig = {
-        contentRouting?: {},
+        contentRouting?: {};
         dht?: {
-            kBucketSize?: number
-        },
+            kBucketSize?: number;
+        };
         peerDiscovery?: {
-            autoDial?: boolean,
-            enabled?: boolean,
+            autoDial?: boolean;
+            enabled?: boolean;
             bootstrap?: {
-                interval?: number
-                enabled?: boolean
-                list?: Multiaddr.Multiaddr[]
-            },
+                interval?: number;
+                enabled?: boolean;
+                list?: Multiaddr.Multiaddr[];
+            };
             mdns?: {
-                interval?: number
-                enabled?: boolean
-            },
+                interval?: number;
+                enabled?: boolean;
+            };
             webRTCStar?: {
-                interval?: number
-                enabled?: boolean
-            },
+                interval?: number;
+                enabled?: boolean;
+            };
             websocketStar?: {
-                enabled?: boolean
-            }
-        },
-        peerRouting?: {},
+                enabled?: boolean;
+            };
+        };
+        peerRouting?: {};
         pubsub?: {
-            enabled?: boolean,
-            emitSelf?: boolean,
-            signMessages?: boolean,
-            strictSigning?: boolean
-        },
+            enabled?: boolean;
+            emitSelf?: boolean;
+            signMessages?: boolean;
+            strictSigning?: boolean;
+        };
         relay?: {
-            enabled?: boolean,
+            enabled?: boolean;
             hop?: {
-                enabled?: boolean,
-                active?: boolean
-            }
-        }
+                enabled?: boolean;
+                active?: boolean;
+            };
+        };
     };
 
     export type OptionsModules = {
-        connEncryption?: Array<LibP2pSecio>,
-        streamMuxer: Array<LibP2pMplex | LibP2pSpdy | PullMplex>,
-        dht?: typeof LibP2pKadDht,
-        peerDiscovery: Array<typeof LibP2pBootstrap>,
-        transport: LibP2pTransport[]
+        connEncryption?: Array<LibP2pSecio>;
+        streamMuxer: Array<LibP2pMplex | LibP2pSpdy | PullMplex>;
+        dht?: typeof LibP2pKadDht;
+        peerDiscovery: Array<typeof LibP2pBootstrap>;
+        transport: LibP2pTransport[];
     };
 
     export type Options = {
-        config: OptionsConfig,
-        modules: OptionsModules,
-        peerBook?: PeerBook,
-        peerInfo: PeerInfo,
+        config: OptionsConfig;
+        modules: OptionsModules;
+        peerBook?: PeerBook;
+        peerInfo: PeerInfo;
     };
 
-    export type Events = 'peer:connect' | 'peer:disconnect' | 'peer:discovery' | 'start' | 'stop';
+    export type Events =
+        | "peer:connect"
+        | "peer:disconnect"
+        | "peer:discovery"
+        | "start"
+        | "stop";
 }
 
 declare class LibP2p {
@@ -84,9 +89,20 @@ declare class LibP2p {
     readonly peerBook: PeerBook;
 
     dial(peerInfo: PeerInfo): Promise<LibP2pConnection>;
-    dialProtocol(peerInfo: PeerInfo | Multiaddr.Multiaddr, protocol: string): Promise<LibP2pConnection>;
+    dialProtocol(
+        peerInfo: PeerInfo | Multiaddr.Multiaddr,
+        protocol: string
+    ): Promise<LibP2pConnection>;
     hangUp(peerInfo: PeerInfo): Promise<void>;
-    handle(protocol: string, handler: (protocol: string, conn: LibP2pConnection) => any, matcher?: (protocol: string, requestedProtocol: string, cb: (error: Error | null, accept: boolean) => void) => any): void;
+    handle(
+        protocol: string,
+        handler: (protocol: string, conn: LibP2pConnection) => any,
+        matcher?: (
+            protocol: string,
+            requestedProtocol: string,
+            cb: (error: Error | null, accept: boolean) => void
+        ) => any
+    ): void;
     unhandle(protocol: string): void;
     isStarted(): boolean;
     on(event: LibP2p.Events, cb: (event: any) => any): this;
@@ -97,6 +113,6 @@ declare class LibP2p {
     stop(): Promise<void>;
 }
 
-declare module 'libp2p' {
+declare module "libp2p" {
     export default LibP2p;
 }
