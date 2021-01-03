@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright 2017-2020 @polkadot/ts authors & contributors
+# Copyright 2017-2021 @polkadot/ts authors & contributors
 # SPDX-License-Identifier: ISC
 
 rm -rf build
