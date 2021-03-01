@@ -6,7 +6,7 @@
   "author": "Jaco Greeff <jacogr@gmail.com>",
   "license": "ISC",
   "resolutions": {
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.5"
   },
   "scripts": {
     "build": "./build.sh",
@@ -15,11 +15,11 @@
     "test": "echo \"No 'yarn run test' available\""
   },
   "dependencies": {
-    "@types/chrome": "^0.0.127"
+    "@types/chrome": "^0.0.133"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@polkadot/dev": "^0.61.21",
-    "@types/node": "^14.14.19"
+    "@babel/core": "^7.13.8",
+    "@polkadot/dev": "^0.61.31",
+    "@types/node": "^14.14.31"
   }
 }
