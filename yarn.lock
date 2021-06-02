@@ -1831,9 +1831,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/dev@npm:^0.62.24":
-  version: 0.62.24
-  resolution: "@polkadot/dev@npm:0.62.24"
+"@polkadot/dev@npm:^0.62.28":
+  version: 0.62.28
+  resolution: "@polkadot/dev@npm:0.62.28"
   dependencies:
     "@babel/cli": ^7.14.3
     "@babel/core": ^7.14.3
@@ -1913,7 +1913,7 @@ __metadata:
     polkadot-exec-prettier: scripts/polkadot-exec-prettier.cjs
     polkadot-exec-tsc: scripts/polkadot-exec-tsc.cjs
     polkadot-exec-webpack: scripts/polkadot-exec-webpack.cjs
-  checksum: ea87348ad013f9ba8c1a0be32519ea63f0290fc7bd2a375ce4212e92f1fbaf3a34d45ac3ae7a13d900c172dac421bfda3bccdc8cae45b8e36a814020862cc88c
+  checksum: 86b8a5217f0f853371fcd965f89df9e307ad2ced9cb9b5f9052038a2309383081788ea431640a152480428c2d2edfa718553f491a60441f618399fca8fa195d7
   languageName: node
   linkType: hard
 
@@ -1922,7 +1922,7 @@ __metadata:
   resolution: "@polkadot/ts@workspace:."
   dependencies:
     "@babel/core": ^7.14.3
-    "@polkadot/dev": ^0.62.24
+    "@polkadot/dev": ^0.62.28
     "@types/chrome": ^0.0.143
     "@types/node": ^15.6.1
   languageName: unknown
