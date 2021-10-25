@@ -1,8 +1,11 @@
 {
   "name": "@polkadot/ts",
   "version": "0.4.10",
+  "license": "ISC",
   "description": "Typescript definitions that are not (yet) available on https://github.com/DefinitelyTyped/DefinitelyTyped",
   "author": "Jaco Greeff <jacogr@gmail.com>",
+  "maintainers": [],
+  "contributors": [],
   "bugs": "https://github.com/polkadot-js/ts/issues",
   "homepage": "https://github.com/polkadot-js/ts#readme",
   "repository": {
@@ -10,15 +13,14 @@
     "url": "https://github.com/polkadot-js/ts.git",
     "directory": "packages/dev"
   },
-  "license": "ISC",
-  "resolutions": {
-    "typescript": "^4.4.4"
-  },
   "scripts": {
     "build": "./build.sh",
     "build:release": "polkadot-ci-ghact-build --skip-beta",
     "lint": "polkadot-dev-run-lint --skip-eslint",
     "test": "echo \"No 'yarn run test' available\""
+  },
+  "resolutions": {
+    "typescript": "^4.4.4"
   },
   "dependencies": {
     "@types/chrome": "^0.0.159"
