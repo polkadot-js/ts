@@ -10,8 +10,7 @@
   "homepage": "https://github.com/polkadot-js/ts#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/polkadot-js/ts.git",
-    "directory": "packages/dev"
+    "url": "https://github.com/polkadot-js/ts.git"
   },
   "scripts": {
     "build": "./build.sh",
