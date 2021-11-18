@@ -19,15 +19,15 @@
     "test": "echo \"No 'yarn run test' available\""
   },
   "resolutions": {
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.2"
   },
   "dependencies": {
-    "@types/chrome": "^0.0.162"
+    "@types/chrome": "^0.0.164"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
-    "@polkadot/dev": "^0.63.20",
-    "@types/node": "^16.11.6"
+    "@polkadot/dev": "^0.63.29",
+    "@types/node": "^16.11.7"
   },
   "packageManager": "yarn@3.0.1"
 }
