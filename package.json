@@ -1,6 +1,6 @@
 {
   "name": "@polkadot/ts",
-  "version": "0.4.16",
+  "version": "0.4.17",
   "license": "ISC",
   "description": "Typescript definitions that are not (yet) available on https://github.com/DefinitelyTyped/DefinitelyTyped",
   "author": "Jaco Greeff <jacogr@gmail.com>",
