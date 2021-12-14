@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
-    "@polkadot/dev": "^0.64.2",
+    "@polkadot/dev": "^0.64.3",
     "@types/node": "^16.11.12"
   },
   "packageManager": "yarn@3.0.1"
