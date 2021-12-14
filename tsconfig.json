@@ -5,6 +5,7 @@
     "**/build/**/*"
   ],
   "compilerOptions": {
+    "emitDeclarationOnly": false,
     "skipLibCheck": true,
     "typeRoots": [
       "./types",
